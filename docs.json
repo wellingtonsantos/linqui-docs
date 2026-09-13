@@ -55,7 +55,9 @@
           "integracoes/omnia-erp",
           "integracoes/sisplan",
           "integracoes/vhsys",
-          "integracoes/frenet"
+          "integracoes/frenet",
+          "integracoes/melhor-envio",
+          "integracoes/mercado-pago"
         ]
       }
     ]
