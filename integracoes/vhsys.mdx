@@ -4,7 +4,7 @@ title: "vhsys"
 
 **Categoria:** Sistemas de estoque e ERP
 
-Integre o sistema de gestão vhsys ao Linqui para manter categorias, produtos, variações e estoque sincronizados automaticamente — e enviar os pedidos feitos no catálogo de volta para o vhsys.
+Integre o sistema de gestão vhsys ao Linqui para manter categorias, produtos, variações e estoque sincronizados automaticamente, e enviar os pedidos feitos no catálogo de volta para o vhsys.
 
 <Info>
   Esta página cobre o que é feito **do lado do Linqui**. Para os passos de instalação do app na Loja de Integrações do vhsys e geração do token, veja a [documentação oficial da vhsys](https://ajuda.vhsys.com.br/categorias/apps-e-integracoes/integracao-linqui).
@@ -19,10 +19,10 @@ Resumidamente, antes de configurar aqui no Linqui você precisa, dentro do paine
     Na Loja de Integrações do vhsys, busque por "Linqui" e instale o aplicativo.
   </Step>
   <Step title="Gerar o token de segurança">
-    Na tela do app, dentro do vhsys, gere um novo token — isso gera um **Access-Token** e um **Secret-Access-Token**.
+    Na tela do app, dentro do vhsys, gere um novo token. Isso gera um **Access-Token** e um **Secret-Access-Token**.
   </Step>
   <Step title="Ativar o envio automático de informações">
-    Depois de conectar a conta aqui no Linqui, volte ao vhsys e saia/entre novamente no painel — é isso que ativa o envio automático de atualizações de produtos e estoque para o Linqui.
+    Depois de conectar a conta aqui no Linqui, volte ao vhsys e saia/entre novamente no painel. É isso que ativa o envio automático de atualizações de produtos e estoque para o Linqui.
   </Step>
 </Steps>
 
@@ -38,7 +38,7 @@ Acesse **Integrações → vhsys** e clique em **Conectar** (ou **Gerenciar**, s
 
 Cole o **Token de acesso** e o **Token secreto** gerados no vhsys e clique em **Atualizar tokens**.
 
-![Tela de configuração da integração vhsys no Linqui — tokens, ativação e envio de pedidos](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/vhsys-config-top.png)
+![Tela de configuração da integração vhsys no Linqui: tokens, ativação e envio de pedidos](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/vhsys-config-top.png)
 
 ### 2. Ativar integração
 
@@ -51,7 +51,7 @@ Define como os pedidos feitos no Linqui voltam para o vhsys:
 | Campo | O que faz |
 | --- | --- |
 | **Ativar envio** | Quando ligado, novos pedidos são enviados automaticamente ao vhsys |
-| **Gatilho** | Em que momento do pedido o envio acontece (ex: Pedido confirmado) — aplicado a todos os ERPs conectados |
+| **Gatilho** | Em que momento do pedido o envio acontece (ex: Pedido confirmado). Aplicado a todos os ERPs conectados |
 | **Enviar como** | Se cada venda entra no vhsys como **Pedido de venda** ou como **Orçamento** |
 
 <Warning>
@@ -67,7 +67,7 @@ Escolha o que acontece quando um produto é atualizado no vhsys (produtos novos 
     Nome, descrição, preço, estoque, categoria, dimensões, imagens, atributos e variações são sobrescritos com os dados do vhsys a cada sincronização.
 
     <Warning>
-      Qualquer edição feita diretamente em um produto pelo Linqui será **resetada** na próxima atualização vinda do vhsys — o vhsys sempre prevalece.
+      Qualquer edição feita diretamente em um produto pelo Linqui será **resetada** na próxima atualização vinda do vhsys, que sempre prevalece.
     </Warning>
   </Tab>
   <Tab title="Atualizar apenas preço e estoque">
@@ -91,7 +91,7 @@ Use **Sincronizar categorias**, **Sincronizar produtos** ou **Sincronizar tudo**
   - **Variações**: grades de produto (cor, tamanho etc.) com preço e estoque próprios.
   - **Estoque**: alterações chegam via webhook de produto/variação e atualizam o saldo.
 
-  Clientes e vendas do vhsys **não** são importados — apenas dados relacionados a produtos.
+  Clientes e vendas do vhsys **não** são importados. Apenas dados relacionados a produtos.
 </Accordion>
 
-Em **Zona de perigo**, o botão **Excluir dados sincronizados** remove todos os dados que vieram do vhsys — use com cuidado, essa ação não pode ser desfeita.
+Em **Zona de perigo**, o botão **Excluir dados sincronizados** remove todos os dados que vieram do vhsys. Use com cuidado, essa ação não pode ser desfeita.
