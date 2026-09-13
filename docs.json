@@ -52,8 +52,8 @@
         "group": "Integrações",
         "icon": "plug",
         "pages": [
-          "integracoes/bling",
           "integracoes/visao-geral",
+          "integracoes/bling",
           "integracoes/olist",
           "integracoes/omnia-erp",
           "integracoes/sisplan",
