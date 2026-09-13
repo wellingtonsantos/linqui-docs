@@ -10,28 +10,55 @@
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
+      "index",
       {
-        "group": "Getting Started",
+        "group": "Primeiros Passos",
+        "icon": "rocket",
         "pages": [
-          "index",
-          "quickstart"
+          "primeiros-passos/visao-geral",
+          "primeiros-passos/configurando-sua-empresa",
+          "primeiros-passos/modelo-de-venda",
+          "primeiros-passos/cadastrando-primeiro-produto",
+          "primeiros-passos/criando-primeiro-catalogo"
+        ]
+      },
+      "catalogos",
+      "produtos",
+      "pedidos",
+      {
+        "group": "Aplicativos",
+        "icon": "bolt",
+        "pages": [
+          "aplicativos/visao-geral",
+          "aplicativos/linqui-ia",
+          "aplicativos/linqui-stories",
+          "aplicativos/linqui-timer",
+          "aplicativos/linqui-page",
+          "aplicativos/compre-junto",
+          "aplicativos/desconto-progressivo",
+          "aplicativos/cupom-de-desconto",
+          "aplicativos/pedido-minimo",
+          "aplicativos/tabela-de-precos",
+          "aplicativos/representantes",
+          "aplicativos/vendedores",
+          "aplicativos/whatsapp-flutuante"
+        ]
+      },
+      "contatos",
+      {
+        "group": "Integrações",
+        "icon": "plug",
+        "pages": [
+          "integracoes/bling",
+          "integracoes/visao-geral",
+          "integracoes/olist",
+          "integracoes/omnia-erp",
+          "integracoes/sisplan",
+          "integracoes/vhsys",
+          "integracoes/frenet"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
