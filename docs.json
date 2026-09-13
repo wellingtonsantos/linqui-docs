@@ -57,9 +57,12 @@
           "integracoes/vhsys",
           "integracoes/frenet",
           "integracoes/melhor-envio",
-          "integracoes/mercado-pago"
+          "integracoes/mercado-pago",
+          "integracoes/meta",
+          "integracoes/google-contatos"
         ]
-      }
+      },
+      "configuracoes"
     ]
   },
   "logo": {
