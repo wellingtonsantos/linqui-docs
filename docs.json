@@ -65,6 +65,7 @@
           "integracoes/google-contatos"
         ]
       },
+      "creditos-e-planos",
       "configuracoes",
       "faq"
     ]
@@ -104,7 +105,7 @@
       "website": "https://linqui.app/"
     }
   },
-  "description": "Central de ajuda e documentação da plataforma Linqui",
+  "description": "Central de ajuda da plataforma Linqui: catálogos de produtos, pedidos pelo WhatsApp, aplicativos de conversão, integrações e configurações.",
   "fonts": {
     "family": "Poppins"
   },
