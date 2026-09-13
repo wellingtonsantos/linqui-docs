@@ -64,10 +64,18 @@ Escolha o que acontece quando um produto é atualizado no vhsys (produtos novos 
 
 <Tabs>
   <Tab title="Atualizar produto por completo">
-    Nome, descrição, preço, estoque, categoria, dimensões, imagens, atributos e variações são sobrescritos com os dados do vhsys.
+    Nome, descrição, preço, estoque, categoria, dimensões, imagens, atributos e variações são sobrescritos com os dados do vhsys a cada sincronização.
+
+    <Warning>
+      Qualquer edição feita diretamente em um produto pelo Linqui será **resetada** na próxima atualização vinda do vhsys — o vhsys sempre prevalece.
+    </Warning>
   </Tab>
   <Tab title="Atualizar apenas preço e estoque">
-    Mantém nome, descrição, imagens, atributos e variações como estão no Linqui. Apenas preço e estoque são sincronizados a partir do vhsys.
+    Mantém nome, descrição, imagens, atributos e variações como estão no Linqui. Apenas preço e estoque continuam sendo sincronizados a partir do vhsys.
+
+    <Tip>
+      Use esse formato quando quiser **editar os produtos diretamente no Linqui** (fotos, descrição, atributos) sem que essas mudanças sejam sobrescritas a cada sincronização.
+    </Tip>
   </Tab>
 </Tabs>
 
