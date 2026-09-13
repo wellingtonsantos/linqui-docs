@@ -4,18 +4,86 @@ title: "vhsys"
 
 **Categoria:** Sistemas de estoque e ERP
 
-Integre o sistema de gestão vhsys para sincronizar **produtos, estoque, clientes e pedidos** automaticamente.
+Integre o sistema de gestão vhsys ao Linqui para manter categorias, produtos, variações e estoque sincronizados automaticamente — e enviar os pedidos feitos no catálogo de volta para o vhsys.
 
-## Como conectar
+<Info>
+  Esta página cobre o que é feito **do lado do Linqui**. Para os passos de instalação do app na Loja de Integrações do vhsys e geração do token, veja a [documentação oficial da vhsys](https://ajuda.vhsys.com.br/categorias/apps-e-integracoes/integracao-linqui).
+</Info>
+
+## Do lado do vhsys
+
+Resumidamente, antes de configurar aqui no Linqui você precisa, dentro do painel do vhsys:
 
 <Steps>
-  <Step title="Acesse Integrações → vhsys">
-    Clique em **Gerenciar** (ou **Conectar**, se ainda não conectado).
+  <Step title="Instalar o app Linqui">
+    Na Loja de Integrações do vhsys, busque por "Linqui" e instale o aplicativo.
   </Step>
-  <Step title="Autorize o acesso">
-    À sua conta vhsys.
+  <Step title="Gerar o token de segurança">
+    Na tela do app, dentro do vhsys, gere um novo token — isso gera um **Access-Token** e um **Secret-Access-Token**.
   </Step>
-  <Step title="Escolha o que sincronizar">
-    Selecione os dados a sincronizar.
+  <Step title="Ativar o envio automático de informações">
+    Depois de conectar a conta aqui no Linqui, volte ao vhsys e saia/entre novamente no painel — é isso que ativa o envio automático de atualizações de produtos e estoque para o Linqui.
   </Step>
 </Steps>
+
+<Warning>
+  Sem repetir o login no vhsys após conectar, as mudanças de produtos e estoque só ficam disponíveis via sincronização manual, não automática.
+</Warning>
+
+## Do lado do Linqui
+
+Acesse **Integrações → vhsys** e clique em **Conectar** (ou **Gerenciar**, se já estiver conectado).
+
+### 1. Tokens de acesso
+
+Cole o **Token de acesso** e o **Token secreto** gerados no vhsys e clique em **Atualizar tokens**.
+
+![Tela de configuração da integração vhsys no Linqui — tokens, ativação e envio de pedidos](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/vhsys-config-top.png)
+
+### 2. Ativar integração
+
+O toggle **Ativar integração** controla tudo: quando desativado, as atualizações vindas do vhsys são ignoradas e nenhum dado é alterado no Linqui.
+
+### 3. Envio de pedidos
+
+Define como os pedidos feitos no Linqui voltam para o vhsys:
+
+| Campo | O que faz |
+| --- | --- |
+| **Ativar envio** | Quando ligado, novos pedidos são enviados automaticamente ao vhsys |
+| **Gatilho** | Em que momento do pedido o envio acontece (ex: Pedido confirmado) — aplicado a todos os ERPs conectados |
+| **Enviar como** | Se cada venda entra no vhsys como **Pedido de venda** ou como **Orçamento** |
+
+<Warning>
+  Sem a exigência de CPF/CNPJ ativada (em **Configurações → Cadastro de clientes**), os pedidos enviados não ficam vinculados ao cadastro do cliente no vhsys.
+</Warning>
+
+### 4. Atualização de produtos pelo vhsys
+
+Escolha o que acontece quando um produto é atualizado no vhsys (produtos novos são sempre criados por completo):
+
+<Tabs>
+  <Tab title="Atualizar produto por completo">
+    Nome, descrição, preço, estoque, categoria, dimensões, imagens, atributos e variações são sobrescritos com os dados do vhsys.
+  </Tab>
+  <Tab title="Atualizar apenas preço e estoque">
+    Mantém nome, descrição, imagens, atributos e variações como estão no Linqui. Apenas preço e estoque são sincronizados a partir do vhsys.
+  </Tab>
+</Tabs>
+
+### 5. Sincronização manual e zona de perigo
+
+![Sincronização manual, o que é sincronizado e zona de perigo da integração vhsys](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/vhsys-config-bottom.png)
+
+Use **Sincronizar categorias**, **Sincronizar produtos** ou **Sincronizar tudo** para importar sob demanda, sem esperar o próximo webhook automático. A opção **Importar produtos inativos** também traz produtos com status inativo no vhsys (criados como desabilitados no Linqui).
+
+<Accordion title="O que é sincronizado, exatamente">
+  - **Categorias e subcategorias**: criação e atualização, mantendo a hierarquia (subcategoria como filha da categoria).
+  - **Produtos**: cadastro, preço de venda, preço promocional, estoque, dimensões e categoria. A chave de mapeamento é o ID do produto no vhsys (e SKU como fallback).
+  - **Variações**: grades de produto (cor, tamanho etc.) com preço e estoque próprios.
+  - **Estoque**: alterações chegam via webhook de produto/variação e atualizam o saldo.
+
+  Clientes e vendas do vhsys **não** são importados — apenas dados relacionados a produtos.
+</Accordion>
+
+Em **Zona de perigo**, o botão **Excluir dados sincronizados** remove todos os dados que vieram do vhsys — use com cuidado, essa ação não pode ser desfeita.
