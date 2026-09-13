@@ -104,5 +104,16 @@
       "website": "https://linqui.app/"
     }
   },
-  "description": "Central de ajuda e documentação da plataforma Linqui"
+  "description": "Central de ajuda e documentação da plataforma Linqui",
+  "fonts": {
+    "family": "Poppins"
+  },
+  "styling": {
+    "codeblocks": {
+      "theme": {
+        "light": "dracula",
+        "dark": "dracula"
+      }
+    }
+  }
 }
