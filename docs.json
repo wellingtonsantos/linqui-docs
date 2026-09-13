@@ -1,37 +1,70 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Linqui Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2563EB",
+    "light": "#3B82F6",
+    "dark": "#1D4ED8"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
+      "index",
       {
-        "group": "Getting Started",
+        "group": "Primeiros Passos",
+        "icon": "rocket",
         "pages": [
-          "index",
-          "quickstart"
+          "primeiros-passos/visao-geral",
+          "primeiros-passos/configurando-sua-empresa",
+          "primeiros-passos/modelo-de-venda",
+          "primeiros-passos/cadastrando-primeiro-produto",
+          "primeiros-passos/criando-primeiro-catalogo"
         ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+      },
+      "catalogos",
+      "produtos",
+      "contatos",
+      "pedidos",
+      {
+        "group": "Aplicativos",
+        "icon": "bolt",
+        "pages": [
+          "aplicativos/visao-geral",
+          "aplicativos/linqui-ia",
+          "aplicativos/linqui-stories",
+          "aplicativos/linqui-timer",
+          "aplicativos/linqui-page",
+          "aplicativos/compre-junto",
+          "aplicativos/desconto-progressivo",
+          "aplicativos/cupom-de-desconto",
+          "aplicativos/pedido-minimo",
+          "aplicativos/tabela-de-precos",
+          "aplicativos/representantes",
+          "aplicativos/vendedores",
+          "aplicativos/whatsapp-flutuante"
+        ]
+      },
+      {
+        "group": "Integrações",
+        "icon": "plug",
+        "pages": [
+          "integracoes/bling",
+          "integracoes/visao-geral",
+          "integracoes/olist",
+          "integracoes/omnia-erp",
+          "integracoes/sisplan",
+          "integracoes/vhsys",
+          "integracoes/frenet",
+          "integracoes/melhor-envio",
+          "integracoes/mercado-pago",
+          "integracoes/meta",
+          "integracoes/google-contatos"
+        ]
+      },
+      "configuracoes",
+      "faq"
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -40,14 +73,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "https://linqui.app",
+        "label": "Site"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Abrir painel",
+      "href": "https://linqui.app/painel/dashboard"
     }
   },
   "contextual": {
@@ -67,5 +100,6 @@
       "instagram": "https://www.instagram.com/linqui.app",
       "website": "https://linqui.app/"
     }
-  }
+  },
+  "description": "Central de ajuda e documentação da plataforma Linqui"
 }
