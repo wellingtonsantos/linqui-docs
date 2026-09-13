@@ -24,6 +24,7 @@
       },
       "catalogos",
       "produtos",
+      "contatos",
       "pedidos",
       {
         "group": "Aplicativos",
@@ -44,7 +45,6 @@
           "aplicativos/whatsapp-flutuante"
         ]
       },
-      "contatos",
       {
         "group": "Integrações",
         "icon": "plug",
@@ -62,7 +62,8 @@
           "integracoes/google-contatos"
         ]
       },
-      "configuracoes"
+      "configuracoes",
+      "faq"
     ]
   },
   "logo": {
