@@ -1,10 +1,10 @@
 ---
 title: "Catálogos"
 icon: "store"
-description: "Crie, personalize e publique catálogos de produtos com editor visual, temas e domínio próprio."
+description: "Crie, configure, personalize e publique catálogos de produtos com editor visual, temas, regras de acesso, PDF e domínio próprio."
 ---
 
-Um **catálogo** é a vitrine de produtos que você compartilha com seus clientes. Você pode ter vários catálogos (ex: um por categoria, por sazonalidade, por público), e o plano gratuito já permite vários.
+Um **catálogo** é a vitrine de produtos que você compartilha com seus clientes. Você pode ter vários catálogos (ex.: um por categoria, por campanha, por público ou um para atacado e outro para varejo), cada um com os próprios produtos, regras e visual. O limite de catálogos do seu plano aparece em **Uso do plano**, no menu lateral.
 
 <Info>
 Nunca criou um catálogo? Veja o passo a passo em [Primeiros Passos](/primeiros-passos/criando-primeiro-catalogo).
@@ -12,36 +12,50 @@ Nunca criou um catálogo? Veja o passo a passo em [Primeiros Passos](/primeiros-
 
 ## Selecionando produtos
 
-Ao criar ou editar um catálogo, você escolhe como ele exibe seus produtos:
-
 | Método | Como funciona |
 |---|---|
-| **Todos** | Exibe todo o catálogo de produtos ativos automaticamente |
+| **Todos** | Exibe todos os produtos ativos, inclusive os que você cadastrar depois |
 | **Por categoria** | Você marca quais categorias (e subcategorias) entram |
 | **Selecionar produtos** | Você escolhe produto a produto |
 
-## Descontos e responsáveis
+## Configurações do catálogo
 
-- **Desconto do catálogo**: um valor em R$ aplicado a todos os produtos daquele catálogo com um clique. Útil para campanhas temporárias.
-- **Responsáveis**: um ou mais membros da equipe que recebem os pedidos desse catálogo. Com mais de um responsável, os pedidos são distribuídos em rodízio; um cliente que já tem responsável continua com ele.
-- **Período**: catálogos podem ter data de início e fim (útil para campanhas como "Dia dos Namorados" ou "Copa").
+| Seção | O que faz |
+| --- | --- |
+| **Ativar catálogo** e **Programação** | Liga o catálogo e, se quiser, define data de abertura e fechamento (ótimo para campanhas como "Dia das Mães") |
+| **Exibição de preços e acesso** | **Exibir preços**, **Exibir preços apenas com cadastro**, **Exibir porcentagem de descontos** e **Apenas com cadastro para enviar pedido** |
+| **Acesso ao catálogo** | **Apenas com cadastro ativo**: o cliente precisa se cadastrar (e ser aprovado, se você exigir) para usar o catálogo |
+| **Aplicar descontos** | Um desconto em **R$** ou em **%** em todos os produtos do catálogo, com um clique |
+| **Tabela de preços** | Vincula uma [tabela de preços](/aplicativos/tabela-de-precos) ao catálogo. Tabelas promocionais, por cliente ou por UF têm prioridade |
+| **Modelo de venda** | Como o pedido é finalizado neste catálogo. Veja [Modelo de venda](/primeiros-passos/modelo-de-venda) |
+| **Integração de pagamento** | No modelo Pagamento Online, qual conexão de pagamento usar |
+| **Frete** | O gateway de frete para o cliente calcular o frete no carrinho. Com **Nenhum**, o cálculo fica desativado |
+| **Responsáveis** | Quem recebe os pedidos do catálogo (veja abaixo) |
+
+<Tip>
+  Para um catálogo de atacado, combine **Apenas com cadastro ativo**, uma tabela de preços de atacado e uma regra de [Pedido Mínimo](/aplicativos/pedido-minimo).
+</Tip>
+
+### Responsáveis e rodízio
+
+Escolha um ou mais membros da equipe para receber os pedidos do catálogo. Com mais de um, os pedidos são distribuídos em **rodízio**; um cliente que já tem responsável continua com ele. No modelo WhatsApp, o pedido vai para o WhatsApp do responsável, quando cadastrado.
 
 ## Editor visual
 
-Clique em **Abrir editor de personalização** dentro de um catálogo salvo para montar a página que o cliente vê. O editor funciona por seções que você adiciona, remove e reordena:
+Com o catálogo salvo, clique em **Abrir editor de personalização** para montar a página que o cliente vê. O editor funciona por seções que você adiciona, remove e reordena:
 
 | Seção | Descrição |
 |---|---|
 | **Cabeçalho** | Logo, busca e menu (fixo) |
-| **Banner Slider** | Imagem em destaque com título e botão |
+| **Banner Slider** | Imagens em destaque com título e botão |
 | **Banner Grid** | Vários banners lado a lado |
-| **Linqui Stories** | Vídeos/fotos estilo Instagram Stories no topo do catálogo |
+| **Linqui Stories** | Vídeos curtos no estilo stories no topo do catálogo |
 | **Categorias** | Slider com as categorias do catálogo |
 | **Produtos em destaque** | Slider de destaques e lançamentos |
 | **Lista de produtos** | Grade principal de produtos |
 | **Rodapé** | Fixo, com informações da empresa |
 
-Você pode alternar entre **preview desktop e mobile** no topo do editor antes de publicar.
+Alterne entre o **preview desktop e mobile** no topo do editor antes de publicar.
 
 ### Temas predefinidos
 
@@ -61,14 +75,24 @@ Clique em **Tema** para aplicar um estilo visual completo (cores, tipografia, fo
 | Editorial Luxe | Serifa display, dourado discreto |
 | Urban Bold | Tipografia condensada, laranja |
 
-Você também pode usar **Usar tema global** para aplicar o mesmo tema em todos os seus catálogos de uma vez, em vez de configurar um por um.
+Use **Usar tema global** para aplicar o mesmo tema a todos os catálogos, em vez de configurar um por um. O tema global fica em **Configurações → Tema**.
 
-## Publicando
+## Publicando e compartilhando
 
-Depois de montar o catálogo, clique em **Publicar** no canto superior direito do editor. Você recebe um link (`loja.linqui.app/...`) pronto para compartilhar. É possível usar um **domínio próprio**. Veja [Configurações](/configuracoes).
+No editor, clique em **Publicar** no canto superior direito. O catálogo recebe um link em `loja.linqui.app` pronto para compartilhar, ou no seu [domínio próprio](/configuracoes#domínio-personalizado).
 
 ![Catálogo publicado, visto pelo cliente: busca, categorias e grade de produtos com preços](https://linqui.app/docs/catalogo-home.jpg)
 
+Na tela do catálogo você também encontra:
+
+- **Compartilhar**: copia o link do catálogo;
+- **Gerar PDF**: gera um PDF do catálogo com textos selecionáveis e links clicáveis para cada produto, com os preços da tabela aplicada;
+- **Imprimir**: abre a impressão do catálogo.
+
+<Note>
+  Se o navegador bloquear a janela do PDF ou da impressão, permita pop-ups para o painel do Linqui.
+</Note>
+
 ## Catálogos inativos
 
-Catálogos que você desativa (mas não exclui) ficam na aba **Inativos**, dentro de Catálogos. Eles saem do ar mas mantêm toda a configuração para reativar quando quiser.
+Catálogos desativados (não excluídos) ficam em **Catálogos → Inativos**. Eles saem do ar, mas guardam toda a configuração para você reativar quando quiser.

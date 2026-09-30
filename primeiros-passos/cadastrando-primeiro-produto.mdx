@@ -3,17 +3,17 @@ title: "3. Cadastrando seu primeiro produto"
 description: "Crie um produto simples, um kit ou um produto de afiliado no Linqui."
 ---
 
-Acesse **Produtos** no menu lateral e clique em **Novo**. Você tem três tipos de produto:
+Acesse **Produtos** no menu lateral, clique em **Novo** e escolha o tipo:
 
 <Tabs>
   <Tab title="Produto">
-    Um produto simples, com nome, preço, fotos, estoque e (opcionalmente) variações como tamanho e cor.
+    Um produto com nome, preço, fotos, estoque e, se quiser, variações como tamanho e cor.
   </Tab>
   <Tab title="Kit">
-    Um produto **composto por outros produtos** já cadastrados. É útil para combos e promoções (ex: "Kit Aliança + Colar + Brinco").
+    Um produto **composto por outros produtos** já cadastrados, útil para combos (ex.: "Kit Aliança + Colar + Brinco"). O preço e o estoque são calculados a partir dos componentes.
   </Tab>
   <Tab title="Afiliado">
-    Um produto que redireciona o cliente para um link externo de compra, em vez de entrar no fluxo normal de pedido do Linqui.
+    Um produto que leva o cliente para um link externo de compra (marketplace), em vez de entrar no carrinho.
   </Tab>
 </Tabs>
 
@@ -21,13 +21,15 @@ Acesse **Produtos** no menu lateral e clique em **Novo**. Você tem três tipos 
 
 | Campo | Descrição |
 |---|---|
-| Nome / SKU | Identificação do produto |
-| Categoria | Usada para organizar e filtrar no catálogo |
-| Preço | Aceita preço promocional ("de/por") com período de validade |
-| Estoque | Quantidade disponível |
-| Variações | Ex: tamanho, cor. Cada combinação pode ter preço e estoque próprios |
-| Fotos | Pode ser gerado com o [Linqui IA](/aplicativos/linqui-ia) |
+| **Nome** | Obrigatório |
+| **Imagens** | Pelo menos uma é obrigatória. Pode ser gerada com o [Linqui IA](/aplicativos/linqui-ia) |
+| **Preço de venda** | Obrigatório. Aceita preço promocional ("de/por") com período |
+| **Código (SKU)** | Em branco, é gerado sozinho |
+| **Categoria** | Organiza e filtra no catálogo. O produto pode estar em mais de uma |
+| **Estoque** | Quantidade disponível |
+| **Variações** | Ex.: tamanho, cor. Cada combinação tem preço e estoque próprios |
+| **Medidas e peso** | Usados no cálculo do frete |
 
 <Info>
-Organize por **categorias** desde o início: isso facilita muito a montagem de catálogos "por categoria" mais adiante.
+  Organize por **categorias** desde o início: isso facilita muito montar catálogos "por categoria" depois. Tem muitos produtos? Use a [importação por planilha](/produtos#importar-e-exportar-por-planilha) ou peça a um [assistente de IA](/integracoes/assistentes-ia) para cadastrar.
 </Info>

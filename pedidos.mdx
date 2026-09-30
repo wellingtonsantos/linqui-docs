@@ -1,36 +1,64 @@
 ---
 title: "Pedidos"
 icon: "receipt"
-description: "Acompanhe pedidos recebidos, carrinhos abandonados e pedidos arquivados no Linqui."
+description: "Acompanhe e edite os pedidos dos catálogos, carrinhos abandonados e arquivados, com status, impressão e envio ao ERP."
 ---
 
-Todos os pedidos recebidos pelos seus catálogos aparecem aqui, com métricas no topo:
+Todos os pedidos feitos nos seus catálogos aparecem em **Pedidos**, com indicadores no topo:
 
-| Métrica | O que mostra |
+| Indicador | O que mostra |
 |---|---|
-| Pedidos | Total de pedidos no período |
-| Vendas | Pedidos convertidos em venda |
-| Taxa de conversão | % de pedidos que viram venda |
-| Valor médio | Ticket médio por pedido |
-| Faturamento | Soma das vendas no período |
+| **Pedidos** | Total de pedidos no período |
+| **Vendas** | Pedidos convertidos em venda |
+| **Taxa de conversão** | % de pedidos que viram venda |
+| **Valor médio** | Ticket médio por pedido |
+| **Faturamento** | Soma das vendas no período |
 
-Use **Filtros** e a busca por código, nome ou WhatsApp para localizar um pedido específico.
+Filtre por catálogo, status e responsável, e busque por código, nome ou WhatsApp. Ordene por mais novos, mais antigos, maior ou menor valor.
 
-## O que muda por Modelo de Venda
+## De onde vêm os pedidos
 
-O que acontece depois que o cliente finaliza o pedido depende do [Modelo de Venda](/primeiros-passos/modelo-de-venda) do catálogo:
+Todo pedido finalizado no catálogo é **registrado aqui**, qualquer que seja o [Modelo de Venda](/primeiros-passos/modelo-de-venda):
 
-| Modelo | Onde o pedido "acontece" |
+| Modelo | O que acontece depois de registrar |
 |---|---|
-| WhatsApp | Mensagem formatada enviada ao WhatsApp da empresa |
-| Linqui | Registrado direto nesta tela de Pedidos |
-| Afiliado | Redirecionado para o link externo (não gera pedido interno) |
-| Pagamento Online | Pago via Mercado Pago e registrado como pedido pago |
+| **WhatsApp** | O cliente é levado ao WhatsApp da empresa (ou do responsável) com a mensagem do pedido |
+| **Linqui** | O pedido fica só no painel, sem abrir o WhatsApp |
+| **Pagamento Online** | O cliente paga por Pix ou cartão e o pedido é atualizado com o pagamento |
+| **Afiliado** | O cliente vai para o link externo; não há pedido no Linqui |
 
-## Pedidos abandonados
+Você também pode lançar um pedido pelo painel em **Novo pedido**, por exemplo para uma venda feita por telefone.
 
-Na aba **Abandonados**, você vê carrinhos que o cliente montou mas não finalizou. É útil para reengajar via WhatsApp manualmente.
+## Status do pedido
+
+| Status | Quando usar |
+| --- | --- |
+| **Aguardando** | Pedido recebido, ainda não tratado |
+| **Aguard. pagamento** | Esperando o pagamento do cliente |
+| **Confirmado** | Pedido aceito |
+| **Pago** | Pagamento confirmado |
+| **Pagamento recusado** | O pagamento online não foi aprovado |
+| **Reembolsado** | O valor foi devolvido ao cliente |
+| **Cancelado** | Pedido desfeito |
+
+Os status disparam automações: o **desconto de estoque** (configurado em **Configurações → Catálogo**), o **envio para o ERP** e para as integrações de frete, e o **evento de compra** da Meta seguem o momento que você escolher em cada configuração. Se um pedido que já descontou estoque for cancelado ou arquivado, o estoque volta sozinho.
+
+## Detalhe do pedido
+
+Ao abrir um pedido você pode:
+
+- **editar os itens**: adicionar produtos, mudar quantidade e remover itens;
+- aplicar **cupom**, **desconto manual** e escolher a **condição de pagamento**;
+- ajustar o **frete** e as **observações**;
+- trocar o **responsável** (vendedor ou representante) e vincular um **cliente** do cadastro;
+- **Enviar mensagem no WhatsApp** ao cliente;
+- **Imprimir** o pedido;
+- **Sincronizar com o ERP** conectado.
+
+## Carrinhos abandonados
+
+Na lista **Abandonados** ficam os carrinhos que o cliente montou e não finalizou. Use para retomar a venda pelo WhatsApp. Eles não entram nos indicadores dos pedidos ativos.
 
 ## Arquivados
 
-Pedidos que você não quer mais ver na lista principal (cancelados, testes, duplicados) podem ser movidos para **Arquivados**, sem perder o histórico.
+Pedidos que não devem mais aparecer na lista principal (cancelados, testes, duplicados) podem ir para **Arquivados**, sem perder o histórico.

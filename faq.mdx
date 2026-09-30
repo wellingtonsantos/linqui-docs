@@ -1,35 +1,81 @@
 ---
 title: "FAQ"
 icon: "circle-question"
-description: "Perguntas frequentes sobre o Linqui: catálogos, pedidos, domínio, kits e solução de problemas."
+description: "Perguntas frequentes sobre o Linqui: catálogos, pedidos, produtos, estoque, preços, domínio, equipe e solução de problemas."
 ---
+
+## Catálogos
 
 <AccordionGroup>
   <Accordion title="Posso ter mais de um catálogo?">
-    Sim. Você pode criar quantos catálogos quiser (o limite do seu plano aparece em **Uso do plano**, na barra lateral), cada um com seus próprios produtos, tema e modelo de venda.
+    Sim. Cada catálogo tem os próprios produtos, tema, regras e modelo de venda. O limite do seu plano aparece em **Uso do plano**, no menu lateral.
   </Accordion>
-  <Accordion title="Como troco o Modelo de Venda de um catálogo específico, sem mudar o padrão da conta?">
-    Abra o catálogo em **Editar catálogo**: as configurações feitas ali têm prioridade sobre o modelo padrão definido em Configurações.
+  <Accordion title="Como troco o Modelo de Venda de um catálogo sem mudar o padrão da conta?">
+    Abra o catálogo e mude o **Modelo de venda** na tela dele. A escolha do catálogo tem prioridade sobre o padrão definido em **Configurações → Modelo de venda**.
+  </Accordion>
+  <Accordion title="Por que um produto não aparece no catálogo?">
+    Confira, nesta ordem:
+
+    - o produto está com **Exibir produto nos catálogos** ligado;
+    - o catálogo inclui o produto (todos, a categoria dele ou a seleção manual);
+    - o estoque não está zerado com **Vender produtos sem estoque** desligado, em **Configurações → Catálogo**;
+    - o catálogo está ativo e dentro da **Programação**, se houver.
+  </Accordion>
+  <Accordion title="O que acontece com um catálogo quando eu o desativo?">
+    Ele sai do ar na hora, mas toda a configuração (produtos, tema, seções) fica guardada em **Catálogos → Inativos** para você reativar quando quiser.
+  </Accordion>
+  <Accordion title="Como faço um catálogo só para clientes cadastrados (atacado)?">
+    No catálogo, ligue **Acesso ao catálogo → Apenas com cadastro ativo** e, se quiser, **Exibir preços apenas com cadastro**. Para aprovar cada cadastro antes, ligue **Exigir aprovação manual** em **Configurações → Cadastro de clientes**. Vincule uma [tabela de preços](/aplicativos/tabela-de-precos) de atacado e, se precisar, um [pedido mínimo](/aplicativos/pedido-minimo).
+  </Accordion>
+</AccordionGroup>
+
+## Pedidos
+
+<AccordionGroup>
+  <Accordion title="Os pedidos feitos pelo WhatsApp aparecem em Pedidos?">
+    Sim. Em todos os modelos com carrinho (WhatsApp, Linqui e Pagamento Online), o pedido é registrado em **Pedidos** quando o cliente finaliza. No modelo WhatsApp, depois de registrar, o cliente é levado ao WhatsApp com a mensagem do pedido. Só o modelo **Afiliado** não gera pedido no Linqui, porque a compra acontece fora.
   </Accordion>
   <Accordion title="Meus pedidos não estão aparecendo, o que fazer?">
-    Verifique o **Modelo de Venda** do catálogo: se for WhatsApp, o pedido só é registrado como mensagem enviada, não como pedido interno. Se for Afiliado, o pedido acontece fora do Linqui.
+    Confira se o pedido não está em **Pedidos → Abandonados** (o cliente montou o carrinho mas não finalizou) ou em **Arquivados**. Veja também os filtros de catálogo, status e responsável. Se você é vendedor ou representante, só aparecem os pedidos sob a sua responsabilidade.
   </Accordion>
-  <Accordion title="Como faço para usar meu próprio domínio em vez de loja.linqui.app?">
+  <Accordion title="Como troco o WhatsApp que recebe os pedidos?">
+    O número padrão é o **WhatsApp da empresa**, em **Configurações → Minha empresa**. Se o catálogo tiver um vendedor ou representante responsável com WhatsApp cadastrado, os pedidos desse catálogo vão para o WhatsApp dele.
+  </Accordion>
+</AccordionGroup>
+
+## Produtos e estoque
+
+<AccordionGroup>
+  <Accordion title="Quando o estoque é descontado?">
+    Você escolhe em **Configurações → Catálogo → Estoque**: ao criar o pedido, ao confirmar, ao marcar como pago, ou não descontar automaticamente. Se um pedido que já descontou for cancelado ou arquivado, o estoque volta.
+  </Accordion>
+  <Accordion title="Um Kit desconta do estoque dos produtos que o compõem?">
+    Sim. O estoque do kit é calculado a partir dos componentes, e vender um kit reduz o estoque de cada item que faz parte dele.
+  </Accordion>
+  <Accordion title="Como cadastro muitos produtos de uma vez?">
+    Use **Produtos → Importar planilha** (até 500 linhas por arquivo) ou peça a um [assistente de IA](/integracoes/assistentes-ia) conectado à sua conta. Se você usa um ERP, a integração importa os produtos para você.
+  </Accordion>
+  <Accordion title="Como vendo com preço diferente para atacado e varejo?">
+    Use o app [Tabela de Preços](/aplicativos/tabela-de-precos): crie uma tabela para o atacado e vincule a um catálogo, a um tipo de cliente ou a clientes específicos. Ela também aceita faixas por quantidade.
+  </Accordion>
+</AccordionGroup>
+
+## Conta, domínio e equipe
+
+<AccordionGroup>
+  <Accordion title="Como uso meu próprio domínio em vez de loja.linqui.app?">
     Acesse **Configurações → Domínio personalizado** e siga as instruções de apontamento de DNS.
   </Accordion>
   <Accordion title="Quanto custa cada domínio adicional?">
     O primeiro domínio personalizado está incluído no plano. Cada domínio adicional custa **R\$ 9,90 por mês**, cobrado por domínio na mesma assinatura. Ao excluir um domínio adicional, a cobrança dele é removida automaticamente.
   </Accordion>
-  <Accordion title="O que acontece com um catálogo quando eu o desativo?">
-    Ele sai do ar imediatamente, mas toda a configuração (produtos, tema, seções) fica salva na aba **Inativos** para reativar quando quiser.
+  <Accordion title="O que vendedores e representantes veem no painel?">
+    Apenas os catálogos, contatos e pedidos pelos quais são responsáveis. Itens sem responsável definido ficam visíveis somente para o dono da conta e administradores. Veja [Vendedores](/aplicativos/vendedores) e [Representantes](/aplicativos/representantes).
   </Accordion>
-  <Accordion title="Um Kit desconta do estoque dos produtos que o compõem?">
-    Sim, como o Kit é composto por outros produtos já cadastrados, vender um Kit reduz o estoque de cada item que faz parte dele.
+  <Accordion title="Como dou acesso ao painel para outra pessoa?">
+    Em **Configurações → Usuários**, clique em **Novo usuário**, escolha as permissões de cada área e envie o link de convite. Veja [Usuários e permissões](/configuracoes#usuários-e-permissões).
   </Accordion>
   <Accordion title="Como funcionam os créditos do Linqui IA?">
-    Cada geração de imagem (incluindo correções e variações) consome créditos de IA. O plano inclui créditos mensais e você pode comprar pacotes avulsos quando precisar. Veja valores em [Créditos e Planos](/aplicativos/creditos-e-planos).
-  </Accordion>
-  <Accordion title="O que vendedores e representantes veem no painel?">
-    Vendedores e representantes veem apenas os contatos, pedidos e itens pelos quais são responsáveis. Itens sem responsável definido ficam visíveis somente para o dono da conta e administradores.
+    Cada geração de imagem (incluindo correções e variações) consome créditos de IA. O plano inclui créditos mensais e você pode comprar pacotes avulsos quando precisar. Veja [Créditos e Planos](/aplicativos/creditos-e-planos).
   </Accordion>
 </AccordionGroup>
