@@ -1,21 +1,44 @@
 ---
 title: "Frenet"
+description: "Cotação de frete em tempo real com várias transportadoras no carrinho do catálogo, e envio do pedido para gerar a etiqueta na Frenet."
 ---
 
 **Categoria:** Gateway de frete
 
-Cotação de frete em **tempo real** com várias transportadoras integradas em uma única conta, exibida direto no checkout do catálogo.
+Com a **Frenet**, o cliente informa o CEP no carrinho e vê o valor e o prazo de várias transportadoras, com um único token. Depois da venda, o pedido pode ir para a Frenet para você gerar a etiqueta.
 
 ## Como conectar
 
 <Steps>
-  <Step title="Acesse Integrações → Frenet">
-    Clique em **Conectar**.
+  <Step title="Pegue o token na Frenet">
+    No painel da Frenet, acesse **Configurações → Token de Integração** e copie o token.
   </Step>
-  <Step title="Informe o token">
-    Token da sua conta Frenet.
+  <Step title="Cole o token no Linqui">
+    Em **Integrações → Frenet**, cole o token em **Token Frenet** e salve.
   </Step>
-  <Step title="Configure a origem do frete">
-    Em [Configurações](/configuracoes) (CEP de envio).
+  <Step title="Escolha as transportadoras">
+    Em **Transportadoras**, selecione as transportadoras e os tipos de serviço que o cliente vai ver na cotação.
+  </Step>
+  <Step title="Ative a integração">
+    Ligue **Ativar integração** para habilitar o cálculo de frete via Frenet.
+  </Step>
+  <Step title="Escolha a Frenet no catálogo">
+    Em cada catálogo, em **Frete**, selecione a Frenet como gateway de frete. Com **Nenhum**, o cálculo fica desativado naquele catálogo.
   </Step>
 </Steps>
+
+<Info>
+  A origem do frete é o **CEP do endereço da empresa**, em **Configurações → Minha empresa**. As medidas e o peso vêm do cadastro de cada produto; cadastre embalagens pré-definidas em **Configurações → Frete** para agilizar.
+</Info>
+
+## Opções
+
+| Opção | O que faz |
+| --- | --- |
+| **Prazo adicional** | Dias somados a todas as estimativas de entrega (ex.: tempo de separação) |
+| **Cadastro completo obrigatório** | Os catálogos que usam a Frenet passam a exigir o cadastro completo do cliente para finalizar o pedido |
+| **Ativar envio pós-cotação** | Quando o pedido atinge o **Gatilho** escolhido (pedido criado, confirmado ou pago), ele é enviado para a Frenet para você gerar a etiqueta lá. Só vale para pedidos cujo frete foi cotado pela Frenet |
+
+<Tip>
+  Em **Configurações → Frete** você também encontra o **Frete inteligente** (mostra só a opção mais rápida e a mais econômica entre as transportadoras), **Retirar na loja** e **Entrega própria**.
+</Tip>

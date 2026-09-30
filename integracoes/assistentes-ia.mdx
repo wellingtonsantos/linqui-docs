@@ -1,0 +1,80 @@
+---
+title: "Assistentes de IA"
+description: "Conecte o Claude, o ChatGPT ou o Gemini à sua conta e gerencie produtos, pedidos e ofertas pelo chat, com diagnóstico do negócio e plano de vendas."
+---
+
+**Categoria:** Utilidades
+
+Conecte sua conta Linqui a um assistente de IA (**Claude**, **ChatGPT** ou **Gemini**) e faça pelo chat o que você faria no painel: cadastrar vários produtos de uma vez, ajustar estoque, consultar pedidos e contatos, analisar os números da conta e criar cupons, promoções, desconto progressivo e compre junto.
+
+## Como conectar
+
+<Steps>
+  <Step title="Copie o endereço do servidor">
+    Em **Integrações → Assistentes de IA**, copie o endereço `https://mcp.linqui.app/`.
+  </Step>
+  <Step title="Adicione um conector no assistente">
+    No assistente, abra as configurações de conectores e escolha adicionar um conector personalizado. Cole o endereço como endereço do servidor.
+  </Step>
+  <Step title="Autorize a conta">
+    O assistente abre a Linqui para você entrar, escolher a conta e autorizar.
+  </Step>
+</Steps>
+
+<Info>
+  O assistente age com **as suas permissões** e só na conta autorizada. Um vendedor, por exemplo, vê pelo assistente apenas o que vê no painel.
+</Info>
+
+## O que o assistente consegue fazer
+
+| Área | Exemplos |
+| --- | --- |
+| **Produtos** | Cadastrar um ou vários produtos (até 100 por vez), gerar a grade de tamanhos e cores, ajustar preço, promoção e estoque |
+| **Organização** | Criar categorias, atributos (Cor, Tamanho) e características |
+| **Contatos e pedidos** | Consultar e cadastrar contatos, listar pedidos, criar pedidos e mudar o status |
+| **Catálogos** | Listar, criar e ajustar catálogos |
+| **Números da conta** | Resumo, acessos, eventos e produtos mais vendidos |
+| **Diagnóstico** | Problemas no cadastro, desempenho dos produtos, clientes para reativar, carrinhos abandonados e ofertas ativas |
+| **Ofertas** | Criar e editar cupons, desconto progressivo e compre junto, e aplicar ou remover promoção em lote |
+
+## Regras que o assistente segue
+
+O cadastro pelo assistente segue as mesmas regras do painel:
+
+- nome e preço de venda são obrigatórios, e a promoção precisa ser menor que o preço;
+- o SKU é único na conta; em branco, é gerado no padrão do painel;
+- o limite de produtos do plano é respeitado;
+- produto sem foto é salvo **inativo**, para não aparecer sem imagem no catálogo;
+- tamanhos e cores viram variações de verdade, que funcionam no seletor do catálogo;
+- em um cadastro em lote, se algum item estiver errado, nada é criado, e o assistente corrige e tenta de novo.
+
+<Warning>
+  Mudanças de preço, cupons e descontos só acontecem depois que você aprova. Na promoção em lote, o assistente mostra antes uma prévia com o preço atual e o novo de cada produto. Exclusões também pedem a sua confirmação.
+</Warning>
+
+## Atalhos
+
+No Claude, o conector traz três atalhos prontos:
+
+| Atalho | O que faz |
+| --- | --- |
+| **Diagnóstico da conta** | Analisa catálogo, produtos, clientes, carrinhos e ofertas e aponta os pontos cegos do negócio |
+| **Plano de vendas** | Monta um plano de ações com base nos seus dados e executa o que você aprovar |
+| **Cadastrar produtos** | Cadastra vários produtos, com fotos, categorias, tamanhos e cores |
+
+## Exemplos de pedidos
+
+- "Faça um diagnóstico da minha conta na Linqui dos últimos 30 dias e me mostre os pontos cegos do negócio."
+- "Cadastre estes produtos com tamanhos P, M e G e cores Preto e Branco: (cole a lista ou mande as fotos)."
+- "Quais clientes pararam de comprar há mais de 60 dias? Crie um cupom de 10% válido por 7 dias e me sugira a mensagem de WhatsApp."
+- "Quais produtos estão com estoque parado? Me mostre uma prévia de promoção de 15% neles até domingo."
+
+A página **Assistentes de IA** do painel tem esses exemplos com um botão para copiar.
+
+## Gerenciar as conexões
+
+Em **Conexões ativas** você vê cada assistente conectado, a data da conexão e do último uso. Clique em **Revogar** para cortar o acesso na hora.
+
+<Note>
+  Quando o Linqui ganha ferramentas novas, alguns assistentes só as mostram depois que você **desconecta e conecta de novo** o conector nas configurações do assistente.
+</Note>

@@ -1,10 +1,11 @@
 ---
 title: "Sisplan"
+description: "Integre o Sisplan ao Linqui: categorias, cores e tamanhos, produtos, variantes e estoque sincronizados, e pedidos enviados de volta."
 ---
 
 **Categoria:** Sistemas de estoque e ERP
 
-Sincronize **categorias, atributos, produtos e estoque** do Sisplan automaticamente para o Linqui.
+Traga do **Sisplan** as categorias, os produtos com cores e tamanhos e o estoque, que é atualizado a cada 5 minutos. Os pedidos do catálogo podem ser enviados de volta para o Sisplan.
 
 ## Como conectar
 
@@ -12,10 +13,35 @@ Sincronize **categorias, atributos, produtos e estoque** do Sisplan automaticame
   <Step title="Acesse Integrações → Sisplan">
     Clique em **Conectar**.
   </Step>
-  <Step title="Informe os dados de acesso">
-    Dados de acesso ao Sisplan.
+  <Step title="Informe as credenciais">
+    Em **Credenciais**, informe o **Usuário** e a **Senha** do usuário AD do Sisplan. O acesso é renovado automaticamente.
   </Step>
-  <Step title="Escolha o que sincronizar">
-    Escolha quais dados devem ser sincronizados.
+  <Step title="Ative a integração">
+    Ligue **Ativar integração**. Quando desligada, a sincronização automática e a manual são ignoradas.
+  </Step>
+  <Step title="Importe os dados">
+    Em **Sincronização manual**, importe categorias e produtos pela primeira vez.
   </Step>
 </Steps>
+
+## O que é sincronizado
+
+| Dado | Como chega ao Linqui |
+| --- | --- |
+| **Categorias** | Criadas e atualizadas a partir do Sisplan |
+| **Atributos** | Cores e tamanhos viram opções dos atributos **Cor** e **Tamanho** da conta |
+| **Produtos** | Nome, SKU, preço, preço promocional, estoque e categoria |
+| **Variantes** | Combinações de cor × tamanho, com SKU e estoque próprios |
+| **Estoque** | Atualizado a cada 5 minutos |
+
+<Note>
+  Os dados de produtos vêm só do Sisplan para o Linqui. Edições feitas no Linqui nesses dados são sobrescritas na próxima sincronização.
+</Note>
+
+## Envio de pedidos
+
+No card **Envio de pedidos**, ligue **Ativar envio** e escolha o **Gatilho** (pedido criado, confirmado, pago ou qualquer mudança de status). Para enviar um pedido na hora, abra o pedido e clique em **Sincronizar com o ERP**.
+
+## Zona de perigo
+
+**Excluir dados sincronizados** remove todos os dados que vieram do Sisplan. Essa ação não pode ser desfeita.

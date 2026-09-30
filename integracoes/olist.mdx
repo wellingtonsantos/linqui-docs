@@ -1,21 +1,59 @@
 ---
 title: "Olist"
+description: "Integre o Olist (Tiny) ao Linqui: produtos, estoque, preços, categorias e listas de preço chegam sozinhos, e pedidos, clientes e tabelas de preço vão para o Olist."
 ---
 
 **Categoria:** Sistemas de estoque e ERP
 
-A Olist é o ecossistema de soluções que potencializa e automatiza a gestão do empreendedor brasileiro. A integração conecta seu catálogo de produtos ao seu inventário Olist.
+Integre o **Olist** (antigo Tiny ERP) ao Linqui. O Olist avisa o Linqui a cada mudança de produto, estoque, preço, categoria e lista de preço, e o Linqui envia para o Olist os pedidos do catálogo, os clientes e as tabelas de preço.
+
+## O que a integração faz
+
+| Sentido | O que vai |
+| --- | --- |
+| **Olist → Linqui** | Produtos (com variações), estoque, preços, categorias e listas de preço, por notificação automática e por sincronização manual |
+| **Linqui → Olist** | Pedidos do catálogo, clientes e tabelas de preço |
 
 ## Como conectar
 
+A conexão tem duas partes: um **token** para o Linqui enviar dados ao Olist e um **endereço de notificações** para o Olist avisar o Linqui.
+
 <Steps>
-  <Step title="Acesse Integrações → Olist">
-    Clique em **Conectar**.
+  <Step title="Gere o token no Olist">
+    No Olist, acesse **Configurações → Tokens de API** e gere um token da **API V2**.
   </Step>
-  <Step title="Autorize o acesso">
-    Na conta Olist.
+  <Step title="Cole o token no Linqui">
+    Em **Integrações → Olist**, cole o token em **Token de API do Olist** e salve.
   </Step>
-  <Step title="Defina o escopo">
-    Quais produtos/estoques ficam sincronizados.
+  <Step title="Gere a chave de notificações">
+    No mesmo painel, gere a **Chave de notificações**. O Linqui mostra o **Endereço de notificações**.
+  </Step>
+  <Step title="Cadastre o endereço no Olist">
+    Copie o endereço e cole em **todos** os campos de notificação do Olist: produtos, estoque, preços, categorias e listas de preço. É o mesmo endereço para tudo; o Linqui identifica o tipo sozinho.
+  </Step>
+  <Step title="Ative a integração">
+    Ligue **Ativar integração**. Quando desligada, o Linqui não recebe nem envia dados para o Olist.
   </Step>
 </Steps>
+
+<Warning>
+  Se você gerar uma nova chave de notificações, os endereços antigos param de funcionar. Atualize o endereço em todos os campos do Olist depois de trocar a chave.
+</Warning>
+
+## Importar categorias e produtos
+
+Em **Sincronização manual**, importe categorias e produtos (com variações) do Olist sob demanda. Use na primeira conexão e quando quiser trazer muitos produtos de uma vez; no dia a dia as mudanças chegam pelas notificações.
+
+## Enviar pedidos para o Olist
+
+No card **Envio de pedidos**, ligue **Ativar envio** e escolha o **Gatilho**: pedido criado, confirmado, pago ou qualquer mudança de status. O gatilho vale para todos os ERPs conectados. O cliente do pedido é enviado junto.
+
+<Warning>
+  Sem a exigência de CPF/CNPJ ativada (em **Configurações → Cadastro de clientes**), os pedidos enviados não ficam vinculados ao cadastro do cliente no Olist.
+</Warning>
+
+Para enviar um pedido na hora, abra o pedido no Linqui e clique em **Sincronizar com o ERP**.
+
+## Zona de perigo
+
+**Excluir dados sincronizados** remove todos os dados que vieram do Olist. Essa ação não pode ser desfeita.
