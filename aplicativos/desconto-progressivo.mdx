@@ -1,21 +1,55 @@
 ---
 title: "Desconto Progressivo"
+description: "Crie campanhas em que o desconto aumenta conforme o valor do carrinho, com níveis em %, R$ ou frete grátis."
 ---
 
 **Categoria:** Vendas
 
-Quanto mais o cliente compra, **maior o desconto**. Ele incentiva aumentar o valor do carrinho com faixas de desconto escalonadas.
+Quanto mais o cliente compra, **maior o desconto**. Você define níveis pelo **valor do carrinho** (ex.: a partir de R$ 300, 5% de desconto; a partir de R$ 500, 10%) e o catálogo aplica o desconto sozinho, mostrando ao cliente quanto falta para chegar ao próximo nível.
 
-## Como ativar
+## Como criar uma campanha
 
 <Steps>
-  <Step title="Acesse Aplicativos → Desconto Progressivo">
-    Clique em **Entrar**.
+  <Step title="Acesse Aplicativos → Desconto progressivo">
+    Clique em **Entrar** e depois em **Nova campanha**.
   </Step>
-  <Step title="Defina as faixas">
-    Ex: 2 unidades = 5%, 4 unidades = 10%.
+  <Step title="Identifique a campanha">
+    Dê um **Nome interno** (ex.: "Black Friday") e, se quiser, um **Pedido mínimo** para a campanha valer.
   </Step>
-  <Step title="Escolha o alcance">
-    Escolha se a regra vale para todo o catálogo ou só para categorias/produtos específicos.
+  <Step title="Adicione os níveis de desconto">
+    Clique em **Adicionar nível** para cada faixa: o valor a partir do qual o nível vale e o tipo de desconto.
+  </Step>
+  <Step title="Defina validade, combinação e catálogos">
+    Veja as opções abaixo e salve.
   </Step>
 </Steps>
+
+## Níveis de desconto
+
+Cada nível tem:
+
+| Campo | O que faz |
+| --- | --- |
+| **A partir de (R$)** | Valor mínimo do carrinho para o nível valer |
+| **Tipo** | **Percentual (%)**, **Valor fixo (R$)** ou **Frete grátis** |
+| **Valor** | O percentual ou o valor do desconto |
+
+Os níveis são ordenados pelo valor mínimo. O cliente recebe o nível mais alto que o carrinho alcançar.
+
+<Warning>
+  Mantenha os descontos crescentes: um carrinho maior deve receber um desconto igual ou maior que um carrinho menor. Um nível de R$ 200 com 5% depois de um nível de R$ 100 com 10% faz quem compra mais pagar proporcionalmente mais.
+</Warning>
+
+## Validade, combinação e catálogos
+
+| Opção | O que faz |
+| --- | --- |
+| **Validade** | Período em que a campanha fica vigente. Sem datas, vale sempre |
+| **Combinar com cupons** | Se desligado, a campanha é ignorada quando o cliente aplica um cupom |
+| **Combinar com descontos do catálogo** | Permite somar com produtos que já estão em promoção |
+| **Catálogos** | Onde a campanha vale. Sem seleção, vale em todos, inclusive nos novos |
+| **Ativo** | Quando ativo, a campanha é aplicada automaticamente nos carrinhos |
+
+<Tip>
+  Para escolher os valores dos níveis, olhe o seu ticket médio (em **Pedidos**) e coloque o primeiro nível um pouco acima dele. Assim o desconto incentiva o cliente a adicionar mais um item.
+</Tip>

@@ -1,21 +1,72 @@
 ---
 title: "Tabela de Preços"
+description: "Crie tabelas de preço por cliente, UF, catálogo ou promocionais, com regras automáticas, faixas por quantidade e ajuste por forma de pagamento."
 ---
 
 **Categoria:** Operação
 
-Gerencia **múltiplas tabelas de preço** de forma simples e organizada. É útil para diferenciar preços de atacado e varejo, ou por tipo de cliente.
+Use tabelas de preço para vender o mesmo produto por preços diferentes conforme **quem compra, onde compra ou quanto compra**: atacado e varejo, preço por estado, condição especial para um cliente ou uma promoção com data marcada.
 
-## Como ativar
+## Como criar uma tabela
 
 <Steps>
-  <Step title="Acesse Aplicativos → Tabela de Preços">
-    Clique em **Entrar**.
+  <Step title="Acesse Aplicativos → Tabela de preços">
+    Clique em **Entrar** e depois em **Nova tabela**. Dê um **Nome** e salve para liberar as demais configurações.
   </Step>
-  <Step title="Crie a tabela">
-    Crie uma nova tabela e defina os preços por produto.
+  <Step title="Defina onde vale">
+    Vincule a tabela a catálogos específicos. Sem seleção, ela vale como padrão para toda a conta.
   </Step>
-  <Step title="Associe">
-    Associe a tabela a um catálogo ou a um grupo de clientes específico.
+  <Step title="Defina para quem vale">
+    Qualquer visitante ou somente clientes cadastrados, com filtros por cliente, tipo de pessoa e UF.
+  </Step>
+  <Step title="Defina quando vale">
+    Sempre ou a partir de uma quantidade (total do pedido ou de cada item).
+  </Step>
+  <Step title="Defina os preços">
+    Preço por produto, regras automáticas, faixas por quantidade e ajuste por forma de pagamento.
   </Step>
 </Steps>
+
+## Onde, para quem e quando vale
+
+| Seção | Opções |
+| --- | --- |
+| **Onde vale** | Catálogos específicos. Sem seleção, é a tabela padrão da conta |
+| **Para quem vale** | **Qualquer visitante** ou **Somente clientes cadastrados** (e logados). Dá para restringir por **clientes específicos**, **tipo de pessoa** (PF/PJ) e **UF**. Dentro de cada filtro vale qualquer opção marcada; entre filtros diferentes, todos precisam bater |
+| **Quando vale** | **Sempre**, **Por quantidade total de itens no pedido** ou **Por quantidade de cada item no pedido**, com quantidade mínima e máxima (opcional) |
+| **Promocional** | Com a programação promocional ligada e dentro do período, esta tabela passa por cima das demais |
+
+<Info>
+  Um cliente também pode ter uma tabela fixa: no cadastro do contato, escolha a tabela no campo **Tabela de preços**.
+</Info>
+
+## Como definir os preços
+
+<Tabs>
+  <Tab title="Preços por produto">
+    Defina o preço de cada produto ou variação nesta tabela. A lista mostra o **Preço padrão**, o **Preço nesta tabela** e o **Preço final**. Cada regra pode ser **Preço fixo**, **Desconto** ou **Acréscimo**, em R$ ou em %. Use **Aplicar a selecionados** para mudar vários de uma vez.
+  </Tab>
+  <Tab title="Regras automáticas">
+    Aplique um desconto ou acréscimo para **todos os produtos** ou **por categoria** (vale também para as subcategorias). Produtos cadastrados depois herdam as regras sozinhos.
+
+    Quando mais de uma regra se aplica, vale a mais específica: **produto/variação > subcategoria > categoria principal > todos os produtos**.
+
+    Ligue o **Smart Pricing** para arredondar os preços calculados para cima com finais amigáveis: até R$ 99,99 terminam em ,90; de R$ 100 a R$ 499,99 a unidade vira 5 ou 9; acima de R$ 500 o valor fecha na dezena. Preços definidos produto a produto não são arredondados.
+  </Tab>
+  <Tab title="Por quantidade">
+    Crie faixas de **desconto progressivo por quantidade**: a partir de uma quantidade mínima, um desconto em % sobre o preço do item. Deixe o produto em **Todos** para valer para todos os produtos da tabela.
+  </Tab>
+  <Tab title="Formas de pagamento">
+    Ajuste o preço conforme a condição de pagamento (ex.: desconto no Pix). O ajuste é aplicado sobre o preço final da tabela. As condições são cadastradas em **Configurações → Pagamento**.
+  </Tab>
+</Tabs>
+
+## Prioridade entre tabelas
+
+Quando mais de uma tabela pode valer para o mesmo cliente, a ordem é: **promocional ativa > tabela exclusiva do cliente > tabela do catálogo > tabela padrão**.
+
+Entre tabelas do mesmo tipo (padrão, UF e catálogo), vence a que estiver **mais acima na lista**. Arraste pelo ícone à esquerda para reordenar.
+
+<Note>
+  A quantidade de tabelas incluídas depende do plano do app. Ao passar do limite, o painel oferece liberar uma **tabela de preço adicional**.
+</Note>

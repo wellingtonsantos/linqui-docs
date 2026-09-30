@@ -1,21 +1,53 @@
 ---
 title: "Pedido Mínimo"
+description: "Defina valores e quantidades mínimas ou máximas para os pedidos, por produto ou categoria, com exceções por cliente ou tabela de preço."
 ---
 
 **Categoria:** Vendas
 
-Define **valor ou quantidade mínima** para fechar um pedido, por produto ou por categoria, com exceções possíveis por cliente ou tabela de preço.
+Crie regras que **bloqueiam o pedido** enquanto ele não atinge um valor ou uma quantidade, por exemplo "pedido mínimo de R$ 300 para atacado" ou "mínimo de 6 unidades por modelo". As regras valem no catálogo e também nos pedidos lançados pelo painel.
 
-## Como ativar
+## Como criar uma regra
 
 <Steps>
-  <Step title="Acesse Aplicativos → Pedido Mínimo">
-    Clique em **Entrar**.
+  <Step title="Acesse Aplicativos → Pedido mínimo">
+    Clique em **Entrar** e depois em **Nova regra**.
   </Step>
-  <Step title="Defina a regra">
-    Valor em R$ ou quantidade de itens.
+  <Step title="Dê um nome e a mensagem de bloqueio">
+    O **Nome** é interno. A **Mensagem de bloqueio** aparece para o cliente quando a regra impede o pedido (ex.: "Pedido mínimo de R$ 300 para clientes atacado").
   </Step>
-  <Step title="(Opcional) Exceções">
-    Configure exceções por cliente ou tabela de preço.
+  <Step title="Escolha o tipo de regra">
+    Veja os tipos abaixo e preencha os limites.
+  </Step>
+  <Step title="(Opcional) Exceções, validade e catálogos">
+    Isente ou mude a regra para clientes e tabelas de preço específicos, defina um período e escolha os catálogos.
   </Step>
 </Steps>
+
+## Tipos de regra
+
+| Tipo | O que limita |
+| --- | --- |
+| **Pedido por valor** | Valor mínimo e/ou máximo do pedido, em R$ |
+| **Pedido por quantidade** | Quantidade mínima e/ou máxima de itens no pedido |
+| **Quantidade por produto** | Mínimo e/ou máximo de unidades de produtos específicos |
+| **Regras por categoria** | Valor e/ou quantidade mínima ou máxima por categoria |
+
+<Note>
+  Preencha ao menos o mínimo ou o máximo. Sem nenhum dos dois, a regra não bloqueia nenhum pedido.
+</Note>
+
+## Exceções
+
+Em **Exceções**, escolha um **Cliente** ou uma **Tabela de preço** e o modo:
+
+- **Isentar**: a regra não vale para esse cliente ou tabela;
+- **Sobrescrever**: vale um limite diferente para ele.
+
+Útil para clientes especiais ou para quem compra com a tabela de varejo, sem o mínimo do atacado.
+
+## Validade e catálogos
+
+- **Validade**: período em que a regra fica vigente. Sem datas, vale sempre.
+- **Catálogos**: onde a regra vale. Sem seleção, vale em todos, inclusive nos novos.
+- **Ativo**: quando ativa, a regra é aplicada no catálogo e no lançamento de pedidos pelo painel.
