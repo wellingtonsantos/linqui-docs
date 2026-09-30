@@ -1,21 +1,164 @@
 ---
 title: "Bling"
+description: "Conecte o Bling ao Linqui: importe produtos com variações, receba atualizações de estoque e envie os pedidos do catálogo para o Bling."
 ---
 
 **Categoria:** Sistemas de estoque e ERP
 
-Integra o Bling ao Linqui e sincroniza **produtos, estoque e pedidos** automaticamente, para vender com mais praticidade pelo WhatsApp.
+Com a integração, o Bling alimenta o seu catálogo e recebe os pedidos: você continua cadastrando produtos e controlando o estoque no Bling, e o Linqui cuida da vitrine e da venda pelo WhatsApp.
+
+![Seção Sistemas de estoque e ERP na tela de Integrações do Linqui, com o card do Bling conectado](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/bling-integracoes-erp.png)
+
+## O que a integração faz
+
+### Do Bling para o Linqui
+
+| O quê | Como funciona |
+| --- | --- |
+| **Categorias** | Importadas quando você clica em **Sincronizar categorias** |
+| **Produtos e variações** | Importados quando você clica em **Sincronizar produtos**. Depois disso, são atualizados sozinhos sempre que forem criados ou alterados no Bling, e desativados quando forem excluídos |
+| **Estoque** | Atualizado sozinho a cada movimentação no Bling, já descontando as reservas |
+| **Status dos pedidos** | Os pedidos que o Linqui enviou ao Bling acompanham a situação que você define lá |
+
+### Do Linqui para o Bling
+
+| O quê | Como funciona |
+| --- | --- |
+| **Pedidos** | Enviados como **pedido de venda**, no momento que você escolher (pedido criado, confirmado, pago ou a cada mudança de status) |
+| **Clientes** | O cliente do pedido é cadastrado ou atualizado nos contatos do Bling |
+
+<Accordion title="O que é importado de cada produto">
+  - **Dados do produto**: nome, código (SKU), descrição, preço de venda, preço promocional, custo e código de barras (GTIN).
+  - **Categoria**: vinculada quando a categoria já foi importada. Por isso, importe as categorias antes dos produtos.
+  - **Imagens**: as imagens cadastradas no produto do Bling.
+  - **Medidas e peso**: largura, altura e profundidade (convertidas para centímetros) e peso.
+  - **Estoque**: o saldo disponível, já descontando as reservas.
+  - **Variações**: nome, código, preço, estoque e imagens de cada variação (cor, tamanho etc.).
+
+  O produto é identificado pelo ID do Bling. Se já existir no Linqui um produto com o **mesmo código (SKU)**, ele é vinculado e atualizado, sem criar um duplicado.
+</Accordion>
+
+<Accordion title="Como a situação do pedido no Bling vira status no Linqui">
+  | Situação no Bling | Status no Linqui |
+  | --- | --- |
+  | Em aberto, Em digitação | Aguardando |
+  | Em andamento, Verificado, Atendido | Confirmado |
+  | Cancelado | Cancelado |
+
+  O status só avança: um pedido já marcado como **Pago** no Linqui não volta para **Confirmado** por causa de uma situação anterior no Bling. Situações personalizadas seguem a situação padrão da qual foram criadas.
+</Accordion>
+
+## Antes de começar
+
+<Steps>
+  <Step title="Conta Bling ativa">
+    A conta precisa estar ativa, sem pendência financeira. Contas inativas não conseguem autorizar aplicativos.
+  </Step>
+  <Step title="Usuário com acesso completo">
+    Autorize com o **usuário administrador** do Bling, ou com um usuário que tenha acesso a produtos, estoque, pedidos de venda e contatos.
+  </Step>
+  <Step title="Mesmo código nos dois sistemas">
+    Se você já tem produtos cadastrados no Linqui, use neles o mesmo código (SKU) do Bling. Assim eles são vinculados na importação, e os pedidos chegam ao Bling com o produto certo.
+  </Step>
+</Steps>
 
 ## Como conectar
 
 <Steps>
   <Step title="Acesse Integrações → Bling">
-    Clique em **Conectar**.
+    No painel do Linqui, abra **Integrações** e clique em **Conectar** no card do Bling (ou em **Gerenciar**, se já estiver conectado).
   </Step>
-  <Step title="Autorize o acesso">
-    Na tela do Bling.
+  <Step title="Clique em Conectar ao Bling">
+    Você é levado à tela de autorização do Bling. Não é preciso copiar chaves nem tokens.
   </Step>
-  <Step title="Escolha o que sincronizar">
-    Produtos, estoque, pedidos e o sentido da sincronização.
+  <Step title="Autorize o Linqui">
+    Confira se é a conta Bling certa e clique em **Autorizar**. Você volta ao Linqui com o aviso **Bling conectado**.
+  </Step>
+  <Step title="Ative a integração">
+    Deixe ligado o **Ativar integração**. Quando desligado, o Linqui não recebe nem envia dados para o Bling.
   </Step>
 </Steps>
+
+![Tela da integração Bling no Linqui: conexão, atualizações automáticas, sincronização manual, ativação, envio de pedidos e zona de perigo](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/bling-config.png)
+
+## Importar categorias e produtos
+
+Em **Sincronização manual**, clique em **Sincronizar categorias** e depois em **Sincronizar produtos**, ou use **Sincronizar tudo** para fazer as duas coisas. Ao terminar, o Linqui mostra quantas categorias, produtos e variações foram importados.
+
+<Tip>
+  Rode a sincronização manual na primeira conexão e sempre que quiser trazer de uma vez muitos produtos novos. No dia a dia, as mudanças chegam sozinhas pelas atualizações automáticas.
+</Tip>
+
+<Warning>
+  O Bling prevalece: nome, preço, estoque, imagens e demais dados de um produto importado são atualizados com o que está no Bling a cada sincronização ou alteração feita lá. Faça as edições desses produtos no Bling.
+</Warning>
+
+<Note>
+  Produtos que ultrapassam o limite do seu plano não são importados e aparecem como **ignorados pelo plano** no resultado.
+</Note>
+
+## Atualizações automáticas
+
+Não há nada para configurar. Enquanto a integração estiver conectada e ativa, o Linqui recebe do Bling:
+
+- cada movimentação de **estoque**;
+- a criação, alteração e exclusão de **produtos** (produtos excluídos no Bling são desativados no Linqui, não apagados);
+- a mudança de **situação dos pedidos** que o Linqui enviou.
+
+## Enviar pedidos para o Bling
+
+![Card de envio de pedidos da integração Bling: ativar envio, gatilho e aviso de CPF ou CNPJ](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/bling-envio-pedidos.png)
+
+| Campo | O que faz |
+| --- | --- |
+| **Ativar envio** | Quando ligado, os pedidos do catálogo são enviados automaticamente ao Bling |
+| **Gatilho** | Em que momento o pedido é enviado: **Pedido criado**, **Pedido confirmado**, **Pedido pago** ou **Qualquer mudança de status**. Vale para todos os ERPs conectados |
+
+O pedido entra no Bling como **pedido de venda**, com os itens (código, descrição, quantidade e valor), o total e o número do pedido do Linqui em **Número da loja**. O cliente é cadastrado ou atualizado nos contatos do Bling.
+
+<Warning>
+  Sem a exigência de CPF/CNPJ ativada (em **Configurações → Cadastro de clientes**), o cliente pode ficar sem documento no Bling.
+</Warning>
+
+Para enviar um pedido específico na hora, abra o pedido no Linqui e clique em **Sincronizar com o ERP**. Depois de enviado, o pedido mostra o número dele no Bling.
+
+## Desativar ou desconectar
+
+- **Pausar**: desligue **Ativar integração**. Nada é recebido nem enviado até você ligar de novo.
+- **Apagar o que veio do Bling**: em **Zona de perigo**, **Excluir dados sincronizados** remove todos os dados importados do Bling. Essa ação não pode ser desfeita.
+- **Revogar o acesso**: no Bling, remova o Linqui em **Minhas instalações**.
+
+## Problemas comuns
+
+<AccordionGroup>
+  <Accordion title='Aparece "Não foi possível conectar o Bling"'>
+    ![Aviso no Linqui quando o Bling recusa a autorização](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/bling-erro-autorizacao.png)
+
+    O Bling recusou a autorização (erro `FORBIDDEN`). As causas mais comuns são:
+
+    - o usuário do Bling que autorizou não tem acesso a todos os módulos usados pelo Linqui (produtos, estoque, pedidos de venda e contatos);
+    - a conta Bling está com pendência financeira.
+
+    Entre no Bling com o usuário administrador da conta e clique em **Reconectar** no Linqui.
+  </Accordion>
+
+  <Accordion title='A tela do Bling diz "Esta conta foi inativada"'>
+    A conta Bling não está ativa e não pode autorizar aplicativos. Regularize a assinatura no Bling e tente conectar de novo.
+  </Accordion>
+
+  <Accordion title="O estoque ou o produto não atualizou">
+    - Confira se **Ativar integração** está ligado.
+    - Só são atualizados os produtos importados do Bling ou vinculados pelo mesmo código (SKU). Rode **Sincronizar produtos** para vincular os que faltam.
+    - Se você mudou permissões no Bling ou trocou de usuário, clique em **Reconectar**.
+  </Accordion>
+
+  <Accordion title="O pedido não chegou ao Bling">
+    - Confira se **Ativar envio** está ligado e se o pedido já atingiu o **Gatilho** escolhido.
+    - Use **Sincronizar com o ERP** na tela do pedido para enviar na hora e ver a mensagem de erro, se houver.
+    - Os itens vão com o código (SKU) do produto no Linqui. Use o mesmo código do Bling para o Bling reconhecer o produto.
+  </Accordion>
+
+  <Accordion title="Apareceram produtos duplicados">
+    O Linqui vincula pelo ID do Bling ou pelo código (SKU). Um produto cadastrado no Linqui com um código diferente do Bling é tratado como outro produto. Ajuste o código no Linqui para ficar igual ao do Bling.
+  </Accordion>
+</AccordionGroup>
