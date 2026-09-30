@@ -1,10 +1,11 @@
 ---
 title: "Melhor Envio"
+description: "Cotação de frete no carrinho do catálogo com as transportadoras do Melhor Envio e envio do pedido para o carrinho do Melhor Envio."
 ---
 
 **Categoria:** Gateway de frete
 
-Ativa a consulta de frete integrada, permitindo calcular valores e prazos de entrega diretamente no catálogo usando o Melhor Envio.
+Com o **Melhor Envio**, o cliente informa o CEP no carrinho e vê valores e prazos das transportadoras que você escolher. Depois da venda, o pedido pode ir direto para o carrinho do Melhor Envio para você pagar e imprimir a etiqueta.
 
 ## Como conectar
 
@@ -13,9 +14,43 @@ Ativa a consulta de frete integrada, permitindo calcular valores e prazos de ent
     Clique em **Conectar**.
   </Step>
   <Step title="Autorize sua conta">
-    Faça login/autorize sua conta Melhor Envio.
+    Entre na sua conta Melhor Envio e autorize o Linqui. Não é preciso copiar token: a conexão é renovada automaticamente.
   </Step>
-  <Step title="Configure a origem do frete">
-    Em [Configurações](/configuracoes).
+  <Step title="Escolha as transportadoras">
+    Selecione as transportadoras e os tipos de serviço que o cliente vai ver na cotação.
+  </Step>
+  <Step title="Ative a integração">
+    Ligue **Ativar integração** para habilitar o cálculo de frete via Melhor Envio.
+  </Step>
+  <Step title="Escolha o Melhor Envio no catálogo">
+    Em cada catálogo, em **Frete**, selecione o Melhor Envio como gateway de frete.
   </Step>
 </Steps>
+
+<Info>
+  A origem do frete é o **CEP do endereço da empresa**, em **Configurações → Minha empresa**. O **CNPJ** da empresa aparece como remetente nas etiquetas.
+</Info>
+
+## Opções
+
+| Opção | O que faz |
+| --- | --- |
+| **Envio para Melhor Envio** | Quando o pedido atinge o **Gatilho** escolhido, ele vai para o carrinho do Melhor Envio para você pagar a etiqueta. Só vale para pedidos cujo frete foi cotado pelo Melhor Envio |
+| **Seguro** | **Assegurar todos os envios** ou **Assegurar apenas quando for obrigatório** |
+| **Serviços adicionais dos Correios** | **AR** (Aviso de Recebimento) e **MP** (Mão Própria) |
+| **Prazo adicional** | Dias somados a todas as estimativas de entrega |
+
+<Warning>
+  Envios com declaração de conteúdo têm indenização máxima de R$ 1.000 e não têm cobertura para avarias. Envios com nota fiscal asseguram valores maiores; o máximo varia por transportadora.
+</Warning>
+
+## Problemas comuns
+
+<AccordionGroup>
+  <Accordion title='Aparece "Token expirado — reconecte"'>
+    A autorização com o Melhor Envio venceu. Clique em **Conectar** de novo e autorize.
+  </Accordion>
+  <Accordion title="Aparece o aviso de método antigo de token manual">
+    Sua conta ainda usa o token copiado à mão. Reconecte para passar a usar a autorização automática, que se renova sozinha e é mais segura.
+  </Accordion>
+</AccordionGroup>

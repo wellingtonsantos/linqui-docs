@@ -3,29 +3,35 @@ title: "2. Escolhendo seu Modelo de Venda"
 description: "Decida como os pedidos chegam até você: WhatsApp, Linqui, Afiliado ou Pagamento Online."
 ---
 
-O **Modelo de Venda** é a decisão mais importante da sua operação no Linqui: ele define **o que acontece quando o cliente finaliza um pedido no seu catálogo**.
+O **Modelo de Venda** define **o que acontece quando o cliente finaliza um pedido no seu catálogo**. É uma das decisões mais importantes da sua operação no Linqui.
 
 <Info>
 [**🔗 Abrir Modelo de venda no painel**](https://linqui.app/painel/configuracoes/modelo-venda)
 </Info>
 
-Esse é o modelo padrão aplicado a novos catálogos. Você também pode alterar individualmente por catálogo.
+O modelo escolhido em **Configurações → Modelo de venda** é o padrão para catálogos novos. Cada catálogo pode ter o seu, na tela do catálogo.
 
 <Tabs>
   <Tab title="WhatsApp">
-    **O mais usado.** O pedido é montado no catálogo e, ao finalizar, o cliente é redirecionado ao WhatsApp da sua empresa com uma mensagem pré-formatada contendo itens, subtotal, descontos, frete e total. Você pode personalizar essa mensagem com variáveis (nome do cliente, itens, CEP, frete, etc.).
+    **O mais usado.** O cliente monta o pedido no catálogo e, ao finalizar, o pedido é **registrado em Pedidos** e o cliente é levado ao WhatsApp da sua empresa (ou do responsável pelo catálogo) com uma mensagem pronta: itens, subtotal, descontos, frete e total.
+
+    Personalize essa mensagem em **Configurações → Modelo de venda → Mensagem do pedido para WhatsApp**, usando variáveis como nome do cliente, itens, CEP e frete.
   </Tab>
   <Tab title="Linqui">
-    O pedido é registrado **dentro da própria plataforma** (aba Pedidos), sem depender do WhatsApp para ser finalizado. Bom para times com vendedores acompanhando pedidos pelo painel.
+    O pedido é registrado **só na plataforma** (em **Pedidos**), sem abrir o WhatsApp. Bom para equipes com vendedores acompanhando os pedidos pelo painel.
   </Tab>
   <Tab title="Afiliado">
-    O catálogo funciona como uma vitrine que **redireciona para um link externo** (outra loja, marketplace). Útil para divulgar produtos que você vende por fora.
+    O catálogo vira uma vitrine que leva o cliente para um **link externo** (marketplace ou outra loja). Não há carrinho nem pedido no Linqui.
   </Tab>
   <Tab title="Pagamento Online">
-    O cliente paga direto no catálogo, via **Mercado Pago** (Pix ou cartão), sem precisar ir ao WhatsApp para negociar.
+    O cliente paga no próprio catálogo por **Pix ou cartão**, via [Mercado Pago](/integracoes/mercado-pago). O pedido é registrado e atualizado com o pagamento. Exige o Mercado Pago conectado e ativo e as condições de pagamento cadastradas.
   </Tab>
 </Tabs>
 
 <Warning>
-O comportamento do checkout muda de acordo com o modelo escolhido. Revise essa configuração com atenção antes de divulgar seu catálogo.
+  O checkout muda conforme o modelo. Revise essa configuração antes de divulgar o catálogo, e faça um pedido de teste.
 </Warning>
+
+<Tip>
+  Em **Configurações → Catálogo → Compra e carrinho**, você pode desligar o carrinho: o botão de comprar passa a levar direto ao WhatsApp com a mensagem do produto. Ou ligar a **compra rápida**, com o botão "Comprar agora".
+</Tip>

@@ -63,7 +63,8 @@
           "integracoes/melhor-envio",
           "integracoes/mercado-pago",
           "integracoes/meta",
-          "integracoes/google-contatos"
+          "integracoes/google-contatos",
+          "integracoes/assistentes-ia"
         ]
       },
       "configuracoes",

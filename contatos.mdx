@@ -1,28 +1,44 @@
 ---
 title: "Contatos"
 icon: "users"
-description: "Gerencie contatos e o funil de clientes do seu catálogo no Linqui."
+description: "Gerencie os contatos e clientes dos seus catálogos: funil, aprovação de cadastro, importação e exportação."
 ---
 
-Todo visitante que interage com seu catálogo (faz um pedido, entra em contato) vira um **contato**, com um mini-CRM embutido.
+Todo cliente que faz um pedido, se cadastra no catálogo ou deixa o contato (por exemplo, no [WhatsApp Flutuante](/aplicativos/whatsapp-flutuante)) vira um **contato** no Linqui, com um mini-CRM embutido.
 
 ## Estágios do funil
 
 | Estágio | Significado |
 |---|---|
-| **Contato** | Chegou até você, ainda sem qualificação |
-| **Qualificado** | Já demonstrou intenção real de compra |
-| **Cliente** | Já comprou pelo menos uma vez |
+| **Contatos** | Chegou até você, ainda sem qualificação |
+| **Qualificados** | Já demonstrou intenção real de compra |
+| **Clientes** | Já comprou pelo menos uma vez |
 
-Você muda o estágio manualmente pelo seletor na lista, ou ele avança automaticamente quando o contato faz um pedido.
+Mude o estágio pelo seletor na lista. O contato também vira **Cliente** sozinho quando um pedido dele é **confirmado** ou **pago**.
 
 ## Dados de cada contato
 
-- Nome e WhatsApp
+- Nome e WhatsApp (com DDI)
 - Tipo: **Pessoa Física** ou **Pessoa Jurídica**
-- Número de pedidos já feitos
-- Ações rápidas: editar dados ou abrir **chat direto** com o contato
+- Documento, e-mail e endereço, quando informados
+- **Tabela de preços** do cliente, se ele tiver uma exclusiva (veja [Tabela de Preços](/aplicativos/tabela-de-precos))
+- **Responsável** (vendedor ou representante)
+- Histórico de pedidos
+
+Na lista, use **Abrir WhatsApp** para conversar com o contato e **Novo contato** para cadastrar à mão (nome e WhatsApp são obrigatórios).
+
+## Aprovação de cadastro
+
+Se você exige aprovação de novos clientes (em **Configurações → Cadastro de clientes**), os cadastros feitos pelo catálogo ficam pendentes até você aprovar. Filtre por **Aguardando**, **Aprovados**, **Rejeitados** ou **Bloqueados** e use **Aprovar cliente** ou **Rejeitar cliente**.
+
+<Info>
+  Um cliente pendente não consegue finalizar pedido nos catálogos que exigem cadastro.
+</Info>
+
+## Importar e exportar
+
+Em **Importar planilha → Importar contatos** traga sua base de clientes de uma planilha. Em **Exportar planilha → Exportar contatos** baixe a lista para usar em outras ferramentas.
 
 ## Integração com Google Contatos
 
-Em [Integrações](/integracoes/google-contatos), você pode conectar o **Google Contatos** para que todo novo contato criado no Linqui seja enviado automaticamente para sua agenda do Google, em tempo real.
+Conecte o [Google Contatos](/integracoes/google-contatos) para que os contatos novos sejam enviados automaticamente para a agenda do seu celular.

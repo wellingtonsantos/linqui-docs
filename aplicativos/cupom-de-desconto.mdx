@@ -1,21 +1,65 @@
 ---
 title: "Cupom de Desconto"
+description: "Crie cupons percentuais, de valor fixo, frete grátis ou leve X pague Y, com regras de uso, validade e catálogos."
 ---
 
 **Categoria:** Vendas
 
-Cria **cupons exclusivos** para campanhas ou clientes selecionados, com código próprio.
+Crie **cupons com código próprio** para campanhas, datas especiais ou clientes selecionados. O cliente digita o código no carrinho do catálogo e o desconto é aplicado na hora.
 
-## Como ativar
+## Como criar um cupom
 
 <Steps>
-  <Step title="Acesse Aplicativos → Cupom de Desconto">
-    Clique em **Entrar**.
+  <Step title="Acesse Aplicativos → Cupom de desconto">
+    Clique em **Entrar** e depois em **Novo cupom**.
   </Step>
-  <Step title="Crie o cupom">
-    Código, tipo de desconto (% ou R$), validade e limite de uso.
+  <Step title="Defina o código">
+    Digite o código que o cliente vai usar (ex.: `VOLTA10`) ou clique no botão ao lado do campo para gerar um código aleatório. Se quiser, dê um **Nome interno** para se organizar (ex.: "Promoção dia das mães").
   </Step>
-  <Step title="Compartilhe">
-    Compartilhe o código com seus clientes ou em campanhas de marketing.
+  <Step title="Escolha o tipo de desconto">
+    Veja os tipos na tabela abaixo.
+  </Step>
+  <Step title="Configure as regras de uso">
+    Valor mínimo do pedido, período de validade, limites de uso e combinação com outros descontos.
+  </Step>
+  <Step title="Escolha os catálogos e salve">
+    Sem nenhum catálogo selecionado, o cupom vale em todos, inclusive nos que você criar depois.
   </Step>
 </Steps>
+
+![Tela de criação de cupom: código, tipo de desconto, regras e limites de uso e combinação](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/cupom-de-desconto.png)
+
+## Tipos de desconto
+
+| Tipo | Como funciona |
+| --- | --- |
+| **Percentual** | Desconto em % sobre o pedido (ex.: 10%) |
+| **Valor fixo** | Desconto em R$ (ex.: R$ 20,00 de desconto) |
+| **Frete grátis** | Zera o frete do pedido |
+| **Leve X, pague Y** | O cliente leva uma quantidade e paga por menos itens (ex.: leve 3, pague 2). A quantidade levada precisa ser maior que a paga |
+
+## Regras de uso
+
+| Campo | O que faz |
+| --- | --- |
+| **Valor mínimo do pedido** | O cupom só vale a partir desse valor. Em branco, não há mínimo |
+| **Período de validade** | Datas de início e fim. Em branco, vale sem prazo |
+| **Máximo de usos no total** | Quantas vezes o cupom pode ser usado, somando todos os clientes. Em branco, é ilimitado |
+| **Máximo de usos por cliente** | Quantas vezes cada cliente pode usar. Em branco, é ilimitado |
+| **Permite combinar com outros cupons** | Quando ligado, o cliente pode aplicar mais de um cupom no mesmo pedido |
+| **Permite combinar com descontos do catálogo** | Quando desligado, o cupom não pode ser usado se o catálogo ou a tabela de preços já aplicar um desconto |
+| **Cupom ativo** | Quando desativado, o cupom não pode ser aplicado no carrinho |
+
+<Tip>
+  Na lista de cupons, use **Copiar código** para mandar o cupom rapidamente pelo WhatsApp ou pelas redes sociais.
+</Tip>
+
+<Warning>
+  Um cupom que já foi usado não pode ser excluído, para não perder o histórico. Para encerrar a campanha, desative o cupom.
+</Warning>
+
+## Ideias de uso
+
+- **Reativar clientes**: um cupom de 10% com validade de uma semana para quem não compra há mais de 60 dias.
+- **Primeira compra**: frete grátis com uso máximo de 1 por cliente.
+- **Aumentar o ticket**: valor fixo de desconto a partir de um valor mínimo de pedido.

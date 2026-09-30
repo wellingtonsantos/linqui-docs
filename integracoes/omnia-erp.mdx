@@ -1,21 +1,57 @@
 ---
 title: "Omnia ERP"
+description: "Integre o Omnia ERP ao Linqui para sincronizar categorias, produtos, variações e estoque e enviar os pedidos do catálogo."
 ---
 
 **Categoria:** Sistemas de estoque e ERP
 
-Integra o sistema de gestão Omnia ERP para sincronizar **produtos, estoque, preços e pedidos** automaticamente com o Linqui.
+O **Omnia ERP** funciona sobre a mesma plataforma da vhsys, então a integração é igual: categorias, produtos, variações e estoque chegam ao Linqui automaticamente, e os pedidos do catálogo voltam para o Omnia.
 
 ## Como conectar
 
 <Steps>
-  <Step title="Acesse Integrações → Omnia ERP">
-    Clique em **Conectar**.
+  <Step title="Gere os tokens no Omnia ERP">
+    No painel do Omnia, gere o **Access-Token** e o **Secret-Access-Token** da integração com o Linqui. O processo é o mesmo da [vhsys](/integracoes/vhsys#do-lado-do-vhsys).
   </Step>
-  <Step title="Informe as credenciais">
-    Token de integração do Omnia.
+  <Step title="Cole os tokens no Linqui">
+    Em **Integrações → Omnia ERP**, cole o **Token de acesso** e o **Token secreto** e clique em **Atualizar tokens**.
   </Step>
-  <Step title="Configure a frequência">
-    Defina a frequência de sincronização.
+  <Step title="Ative a integração">
+    Ligue **Ativar integração**. Quando desligada, as atualizações vindas do Omnia são ignoradas.
   </Step>
 </Steps>
+
+## Envio de pedidos
+
+| Campo | O que faz |
+| --- | --- |
+| **Ativar envio** | Quando ligado, os pedidos do catálogo são enviados automaticamente ao Omnia |
+| **Gatilho** | Em que momento o envio acontece (pedido criado, confirmado, pago ou qualquer mudança de status). Vale para todos os ERPs conectados |
+| **Enviar como** | Se cada venda entra no Omnia como **Pedido de venda** ou como **Orçamento** |
+
+<Warning>
+  Sem a exigência de CPF/CNPJ ativada (em **Configurações → Cadastro de clientes**), os pedidos enviados não ficam vinculados ao cadastro do cliente no Omnia.
+</Warning>
+
+## Atualização de produtos
+
+Escolha o que acontece quando um produto é atualizado no Omnia (produtos novos são sempre criados por completo):
+
+<Tabs>
+  <Tab title="Atualizar produto por completo">
+    Nome, descrição, preço, estoque, categoria, dimensões, imagens, atributos e variações são sobrescritos com os dados do Omnia a cada atualização. Edições feitas no Linqui são perdidas na próxima atualização.
+  </Tab>
+  <Tab title="Atualizar apenas preço e estoque">
+    Mantém nome, descrição, imagens, atributos e variações como estão no Linqui. Só preço e estoque continuam vindo do Omnia. Use quando quiser editar os produtos no Linqui.
+  </Tab>
+</Tabs>
+
+## Sincronização manual e zona de perigo
+
+Use **Sincronizar categorias**, **Sincronizar produtos** ou **Sincronizar tudo** para importar sob demanda. A opção **Importar produtos inativos** traz também os produtos inativos do Omnia, criados como desativados no Linqui.
+
+Em **Zona de perigo**, **Excluir dados sincronizados** remove todos os dados que vieram do Omnia. Essa ação não pode ser desfeita.
+
+<Info>
+  O passo a passo é o mesmo da integração com a vhsys. Veja também a página da [vhsys](/integracoes/vhsys), com prints das telas.
+</Info>

@@ -1,38 +1,114 @@
 ---
 title: "Configurações"
 icon: "gear"
-description: "Configurações da conta Linqui: empresa, modelo de venda, tema global, domínio personalizado e mais."
+description: "Configurações da conta Linqui: empresa, usuários, modelo de venda, catálogo, estoque, tema, domínio, cadastro de clientes, frete, pagamento, SEO e plano."
 ---
 
-Todas as configurações da conta e do catálogo ficam centralizadas aqui, acessíveis pelo ícone de engrenagem (⚙️) no topo do painel.
+As configurações ficam no ícone de engrenagem (⚙️) no topo do painel, organizadas em quatro grupos.
+
+<Info>
+[**🔗 Abrir Configurações no painel**](https://linqui.app/painel/configuracoes/minha-empresa)
+</Info>
 
 ## Meu perfil
 
 | Página | O que configura |
 |---|---|
-| **Meus dados** | Nome, foto e dados pessoais de quem está logado |
-| **Conta e segurança** | Senha e proteções da conta |
+| **Meus dados** | Seus dados pessoais |
+| **Conta e segurança** | Senha, provedores de login e exclusão da conta |
 
 ## Conta
 
 | Página | O que configura |
 |---|---|
-| **Minha empresa** | Identidade, contato, descrição e endereço. Veja [Primeiros Passos](/primeiros-passos/configurando-sua-empresa) |
-| **Horário comercial** | Dias e horários em que você atende, exibidos no catálogo |
+| **Minha empresa** | Logo, nome, segmento, CPF ou CNPJ, WhatsApp da empresa, e-mail, descrição "Sobre", endereço e redes sociais. Veja [Configurando sua empresa](/primeiros-passos/configurando-sua-empresa) |
+| **Horário comercial** | Dias e horários de funcionamento |
+| **Usuários** | Pessoas com acesso ao painel e as permissões de cada uma (veja abaixo) |
+
+### Usuários e permissões
+
+Em **Usuários**, clique em **Novo usuário**, informe o e-mail e salve. O Linqui gera um link de convite e copia para você enviar à pessoa.
+
+Para cada área do painel você escolhe o nível de acesso: **Sem acesso**, **Visualizar** ou **Editar**. As áreas são Dashboard, Pedidos, Catálogos, Contatos, Produtos, Aplicativos, Integrações e Configurações.
+
+<Warning>
+  Um usuário novo começa com acesso total. Ajuste as permissões antes de salvar se a pessoa não deve ver ou editar tudo.
+</Warning>
+
+<Tip>
+  Para vendedores e representantes que devem ver só a própria carteira, use os apps [Vendedores](/aplicativos/vendedores) e [Representantes](/aplicativos/representantes).
+</Tip>
 
 ## Catálogo
 
+### Modelo de venda
+
+O **Modelo de venda padrão** vale para os catálogos novos; cada catálogo pode ter o seu. Aqui também fica a **Mensagem do pedido para WhatsApp**, com variáveis para itens, valores, frete e dados do cliente. Veja [Modelo de venda](/primeiros-passos/modelo-de-venda).
+
+### Catálogo
+
+| Seção | Opções |
+| --- | --- |
+| **Aparência** | Logo do catálogo (170 × 55 px, proporção ~3:1). Sem logo, é usado o da empresa |
+| **Compra e carrinho** | **Ativar carrinho de compras** (desligado, o botão de comprar leva direto ao WhatsApp com a mensagem do produto), **Ativar compra rápida**, **Usar compra rápida como principal** e o texto do botão (padrão "Chamar no WhatsApp", até 30 caracteres) |
+| **Observações** | Observação por produto e observação geral no pedido |
+| **Exibição dos produtos** | Ordem padrão (alfabética, por categoria, menor ou maior preço, mais recentes) e exibir ou ocultar o código (SKU) |
+| **Estoque** | Vender produtos sem estoque, quando descontar o estoque e mostrar a quantidade no catálogo (veja abaixo) |
+
+#### Estoque
+
+| Opção | Escolhas |
+| --- | --- |
+| **Vender produtos sem estoque** | Ligado: produtos zerados continuam visíveis e à venda. Desligado: somem do catálogo |
+| **Desconto automático de estoque** | **Ao criar o pedido**, **Ao confirmar o pedido**, **Ao marcar como pago** ou **Não descontar automaticamente**. Pedido cancelado ou arquivado devolve o estoque |
+| **Mostrar quantidade em estoque no catálogo** | **Nunca exibir**, **Apenas quando o estoque estiver baixo** ou **Sempre exibir**. O limiar de estoque baixo fica em **Produtos → Estoque** |
+
+### Tema
+
+Cores, tipografia, formas, botões, cores das tags de promoção, fundo do catálogo (cor sólida ou gradiente) e o visual do **Linqui Timer** e do **Linqui Stories**. Há predefinições prontas e um preview ao lado. O tema pode valer para todos os catálogos de uma vez.
+
+### Domínio personalizado
+
+Use seu próprio domínio (ex.: `loja.suamarca.com.br`) em vez de `loja.linqui.app`. Siga as instruções de apontamento de DNS na tela. O primeiro domínio está incluído no plano; cada domínio adicional custa **R$ 9,90 por mês**.
+
+### Cadastro de clientes
+
+| Opção | O que faz |
+| --- | --- |
+| **Exigir aprovação manual** | Novos cadastros feitos pelo catálogo ficam pendentes até você aprovar em **Contatos** |
+| **Tipos de pessoa aceitos** | Aceitar Pessoa Física (CPF) e/ou Pessoa Jurídica (CNPJ e razão social). Pelo menos um precisa estar ligado |
+| **Exigir CPF ou CNPJ no carrinho** | Pede o documento na finalização do pedido. Em catálogos com pagamento online ou frete calculado, o documento já é obrigatório |
+
+<Tip>
+  Se você envia pedidos para um ERP, ligue **Exigir CPF ou CNPJ no carrinho** para os pedidos chegarem vinculados ao cadastro do cliente no ERP.
+</Tip>
+
+### Frete
+
+| Opção | O que faz |
+| --- | --- |
+| **Frete inteligente** | Mostra só a opção mais rápida e a mais econômica entre os serviços das suas integrações de frete |
+| **Retirar na loja** | Mostra a retirada na loja no carrinho, com uma observação (ex.: horário de retirada) |
+| **Entrega própria** | Mostra a entrega feita pela sua equipe, com preço e observação |
+| **Embalagens pré-definidas** | Medidas que você usa sempre, para escolher rápido no cadastro dos produtos |
+
+As integrações de frete ficam em [Frenet](/integracoes/frenet) e [Melhor Envio](/integracoes/melhor-envio).
+
+### Pagamento
+
+| Opção | O que faz |
+| --- | --- |
+| **Gateway padrão** | Conexão de pagamento usada pelos catálogos configurados como **Integração geral** |
+| **Condições de pagamento** | Condições como Pix ou Cartão, para todos ou para catálogos específicos, com desconto e parcelamento com faixas por valor |
+
+Veja [Mercado Pago](/integracoes/mercado-pago).
+
+### SEO e GEO
+
+Metatags, schema e indexação dos catálogos, para aparecer no Google e em assistentes de IA.
+
+## Assinatura
+
 | Página | O que configura |
 |---|---|
-| **Modelo de venda** | Como os pedidos são recebidos por padrão. Veja [Primeiros Passos](/primeiros-passos/modelo-de-venda) |
-| **Catálogo** | Preferências gerais de exibição |
-| **Tema** | Tema visual global, aplicável a todos os catálogos de uma vez |
-| **Domínio personalizado** | Use seu próprio domínio (ex: `loja.suamarca.com.br`) em vez de `loja.linqui.app` |
-| **Cadastro de clientes** | Quais dados são pedidos ao cliente no checkout |
-| **Frete** | Regras e integrações de frete (Frenet, Melhor Envio) |
-| **Pagamento** | Configuração do Mercado Pago para o modelo Pagamento Online |
-| **SEO e GEO** | Metadados para busca no Google e assistentes de IA |
-
-<Info>
-[**🔗 Abrir Configurações no painel**](https://linqui.app/painel/configuracoes/minha-empresa)
-</Info>
+| **Meu plano** | Detalhes da assinatura e da cobrança |

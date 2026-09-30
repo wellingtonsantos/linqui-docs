@@ -1,21 +1,46 @@
 ---
 title: "Mercado Pago"
+description: "Receba por Pix e cartão direto no catálogo, com condições de pagamento, desconto e parcelamento. Necessário para o modelo Pagamento Online."
 ---
 
 **Categoria:** Pagamento
 
-Receba pagamentos online no catálogo com **Pix e cartão de crédito**, respeitando suas condições de pagamento. Necessário para usar o modelo de venda **Pagamento Online**.
+Com o **Mercado Pago**, o cliente paga por **Pix ou cartão** direto no catálogo, e o dinheiro cai na sua conta Mercado Pago. É a integração usada pelo modelo de venda **Pagamento Online**.
 
 ## Como conectar
 
 <Steps>
   <Step title="Acesse Integrações → Mercado Pago">
-    Clique em **Conectar**.
+    Clique em **Conectar** e autorize sua conta Mercado Pago.
   </Step>
-  <Step title="Autorize sua conta">
-    Autorize sua conta Mercado Pago.
+  <Step title="Cadastre as condições de pagamento">
+    Cada condição define o meio (**Pix** ou **cartão**), o desconto e o parcelamento que o cliente vê no checkout. Só os meios usados por condições ativas ficam disponíveis.
   </Step>
-  <Step title="Ative o modelo de venda">
-    Ative **Pagamento Online** em [Modelo de venda](/primeiros-passos/modelo-de-venda).
+  <Step title="Ative a integração">
+    Ligue **Ativar integração**. Com ela ativa, os catálogos com o modelo **Pagamento Online** passam a aceitar pagamentos.
+  </Step>
+  <Step title="Configure os catálogos">
+    Em cada catálogo que vai receber pagamento, escolha o modelo de venda **Pagamento Online** e a **Integração de pagamento**. Veja [Modelo de venda](/primeiros-passos/modelo-de-venda).
   </Step>
 </Steps>
+
+## Condições de pagamento
+
+As condições também ficam em **Configurações → Pagamento**. Lá você:
+
+- cria condições como Pix ou Cartão;
+- direciona cada uma para todos os catálogos ou para catálogos específicos;
+- define um desconto (ex.: 5% no Pix);
+- ativa o parcelamento, com faixas por valor.
+
+<Note>
+  As condições só aparecem no catálogo com a integração conectada e ativa.
+</Note>
+
+## Gateway padrão
+
+Em **Configurações → Pagamento**, o **Gateway padrão** é a conexão usada pelos catálogos configurados como **Integração geral**. Um catálogo com uma integração específica ignora o padrão.
+
+## Depois do pagamento
+
+O pedido pago aparece em **Pedidos** com o status **Pago**. Pagamentos recusados aparecem como **Pagamento recusado**. Se você usa um ERP, escolha o gatilho **Pedido pago** para enviar ao ERP só as vendas pagas.

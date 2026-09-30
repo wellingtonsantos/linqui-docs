@@ -1,44 +1,95 @@
 ---
 title: "Produtos"
 icon: "box"
-description: "Cadastro de produtos no Linqui: fotos, variações, kits, categorias, estoque e preços."
+description: "Cadastro de produtos no Linqui: fotos, variações, kits, afiliados, categorias, estoque, preços, importação por planilha e edição em massa."
 ---
 
-O cadastro de produtos é a base de tudo no Linqui: catálogos, pedidos e o Linqui IA dependem dele. É assim que o cliente vê um produto no catálogo:
+O cadastro de produtos é a base de tudo no Linqui: catálogos, pedidos, integrações e o Linqui IA dependem dele. É assim que o cliente vê um produto no catálogo:
 
 ![Página de produto no catálogo do cliente: foto, preço, quantidade e botão de adicionar ao carrinho](https://linqui.app/docs/catalogo-produto.jpg)
 
 ## Tipos de produto
 
+Em **Produtos**, clique em **Novo** e escolha o tipo:
+
 <Tabs>
   <Tab title="Produto">
-    Um item simples, com nome, preço, fotos, estoque e (opcionalmente) variações.
+    Um item com nome, preço, fotos, estoque e, se quiser, variações (tamanho, cor etc.). Com variações, o estoque do produto é a **soma das variações**.
   </Tab>
   <Tab title="Kit">
-    **Composto por outros produtos** já cadastrados. Ótimo para combos ("Kit Aliança + Colar + Brinco"). O estoque do kit depende do estoque dos itens que o compõem.
+    **Composto por outros produtos** já cadastrados, como "Kit Aliança + Colar + Brinco". O preço base é a **soma dos preços dos componentes**, o estoque é **calculado a partir dos componentes** e a promoção do kit é em percentual.
   </Tab>
   <Tab title="Afiliado">
-    Redireciona o cliente para um link externo de compra em vez do fluxo normal de pedido.
+    Em vez de ir para o carrinho, o cliente é levado para o link do produto em um marketplace. Cadastre um link por marketplace em **Links de afiliado**.
   </Tab>
 </Tabs>
+
+## Campos do produto
+
+| Campo | Observação |
+| --- | --- |
+| **Nome** | Obrigatório |
+| **Imagens** | Pelo menos uma é obrigatória. Envie do computador, **Selecione da Mídia** ou **Gere imagem com IA**. Arraste para reordenar |
+| **Preço de venda** | Obrigatório (exceto em kits, que somam os componentes) |
+| **Preço em promoção** e **Período da promoção** | O preço promocional precisa ser menor que o de venda. Com período, a promoção vale só nas datas escolhidas |
+| **Código (SKU)** | Em branco, é gerado sozinho. Use o mesmo código do seu ERP para as integrações reconhecerem o produto |
+| **Estoque** | Quantidade disponível (ou soma das variações) |
+| **Descrição** | Texto com formatação |
+| **Categoria principal** e **Categorias adicionais** | O produto aparece em todas as categorias marcadas |
+| **Características** | Informações que não geram variação, como Material ou Origem |
+| **Medidas da embalagem** | Altura, largura, comprimento e peso, usados no cálculo do frete. Escolha uma embalagem pré-definida ou uma **Medida personalizada** |
+| **Venda por embalagem** | Para vender em caixas, sacos ou pallets mantendo preço e estoque por unidade |
+| **Código de barras (EAN)** e **Código do fabricante (MPN)** | Ajudam na integração com outros sistemas |
+| **Exibir produto nos catálogos**, **Marcar como destaque**, **Marcar como lançamento** | Controlam onde e como o produto aparece |
+
+## Variações
+
+Os **atributos** (Cor, Tamanho, Voltagem...) geram as variações. Cada variação tem o próprio SKU, preço, estoque e imagens.
+
+1. Cadastre os atributos e as opções em **Produtos → Atributos**.
+2. No produto, use **Gerar variações**: escolha as opções de cada atributo e o Linqui cria uma variação para cada combinação, pulando as que já existem.
+
+<Tip>
+  Use atributos para o que o cliente **escolhe** (tamanho, cor) e características para o que ele só **lê** (material, origem).
+</Tip>
 
 ## Organização
 
 | Recurso | Para que serve |
 |---|---|
-| **Categorias** | Agrupam produtos (ex: Moda, Eletrônicos, Pet Shop). Usadas para montar catálogos "por categoria" e os filtros do catálogo público |
-| **Atributos** | Características que geram **variações** com preço/estoque próprios (ex: Tamanho, Cor) |
-| **Características** | Informações adicionais do produto que não geram variação (ex: Material, Voltagem) |
-| **Estoque** | Painel dedicado para ver e ajustar quantidades em lote |
+| **Categorias** | Agrupam produtos em até 2 níveis (categoria e subcategoria). São usadas nos catálogos "por categoria" e nos filtros do catálogo |
+| **Atributos** | Geram variações com preço e estoque próprios |
+| **Características** | Informações adicionais, que também podem virar filtro no catálogo |
+| **Estoque** | Painel com totais, filtro por situação (em estoque, baixo estoque, indisponível) e o **limiar de baixo estoque** |
 
 ## Preços e promoções
 
-Todo produto pode ter um **preço promocional** ("de/por") com **período de validade**. O preço riscado aparece automaticamente no catálogo dentro do período configurado, e volta ao normal depois.
+Todo produto pode ter um **preço promocional** com **período**. O preço riscado aparece no catálogo durante o período e volta ao normal depois. Para promoções com contagem regressiva, combine com o [Linqui Timer](/aplicativos/linqui-timer) no modo dinâmico.
 
-<Info>
-Use **Filtros** e **Ações em massa** na lista de produtos para ativar/desativar, mover de categoria ou editar vários produtos de uma vez.
-</Info>
+Para preços diferentes por cliente, estado, catálogo ou quantidade, use a [Tabela de Preços](/aplicativos/tabela-de-precos).
+
+## Importar e exportar por planilha
+
+Em **Importar planilha** você escolhe **Importar produtos**, **Importar afiliados** ou **Importar variações**.
+
+<Steps>
+  <Step title="Baixe o modelo">
+    Clique em **Baixar modelo (.xlsx)** e preencha. Arquivos `.xlsx`, `.xls` ou `.csv`, com até 5 MB e 500 linhas.
+  </Step>
+  <Step title="Envie e revise">
+    O Linqui mostra linha a linha o que vai ser **criado** ou **atualizado** e aponta os erros.
+  </Step>
+  <Step title="Importe">
+    Marque **Ignorar linhas com erro e importar apenas as válidas** se quiser seguir mesmo com erros. Categorias, atributos e características novas são criadas sozinhas.
+  </Step>
+</Steps>
+
+Em **Exportar planilha** você baixa produtos, afiliados ou variações, edita e importa de volta para atualizar em lote.
+
+## Ações em massa
+
+Na lista de produtos, use **Filtros** e selecione vários produtos para ativar ou desativar, mudar de categoria ou usar **Editar em massa**: uma planilha na tela para ajustar imagem, nome, SKU, categorias, preço, promoção, estoque, descrição e medidas de vários produtos, e duplicar produtos e variações.
 
 ## Fotos com IA
 
-Você pode gerar fotos profissionais de produto direto na plataforma, sem sessão de fotos. Veja [Linqui IA](/aplicativos/linqui-ia).
+Gere fotos profissionais de produto direto na plataforma, sem sessão de fotos. Veja [Linqui IA](/aplicativos/linqui-ia).

@@ -1,21 +1,58 @@
 ---
 title: "Meta (Facebook & Instagram)"
+description: "Conecte a Meta e instale Pixel e API de Conversões nos catálogos, com um ou mais pixels, escolha do momento da compra e feed de produtos automático."
 ---
 
 **Categoria:** Marketing
 
-Conecte sua conta Meta e tenha o **Pixel + API de Conversões** instalados automaticamente nos seus catálogos, para acompanhar e otimizar campanhas no Facebook e Instagram.
+Conecte sua conta Meta e o Linqui instala o **Pixel** e a **API de Conversões** nos seus catálogos, sem código. As visitas, os produtos vistos, os carrinhos e as compras passam a chegar ao Gerenciador de Eventos para medir e otimizar suas campanhas no Facebook e no Instagram.
 
 ## Como conectar
 
 <Steps>
   <Step title="Acesse Integrações → Meta">
-    Clique em **Gerenciar**.
+    Clique em **Gerenciar** e conecte a sua conta Meta, marcando todas as permissões pedidas.
   </Step>
-  <Step title="Autorize o acesso">
-    À sua conta Meta Business.
+  <Step title="Adicione um pixel">
+    Em **Pixels e API de Conversões**, clique em **Adicionar pixel** e selecione o pixel da lista (ou informe o **ID do Pixel**).
   </Step>
-  <Step title="Selecione o Pixel">
-    Escolha o Pixel a ser usado nos catálogos.
+  <Step title="Escolha os catálogos">
+    Cada pixel mede só os catálogos que você escolher para ele.
+  </Step>
+  <Step title="Defina quando a compra é contada">
+    Em **Disparar evento de compra**: **Ao enviar o pedido**, **Ao confirmar o pedido** ou **Apenas ao marcar como pago**.
+  </Step>
+  <Step title="Ative e salve">
+    Ligue **Ativar integração**. Quando desligada, o Pixel e a API de Conversões deixam de receber eventos.
   </Step>
 </Steps>
+
+## O que é enviado
+
+- **Eventos**: visitas, produtos vistos, itens no carrinho, início de checkout, contatos e compras.
+- **Dois caminhos ao mesmo tempo**: pelo navegador e direto do servidor, sem contar a mesma ação duas vezes.
+- **Feed de catálogo**: cada pixel ganha um link de feed com os produtos dos catálogos escolhidos, criado e atualizado sozinho. Copie o link e use no catálogo de produtos da Meta.
+
+## Opções de cada pixel
+
+| Campo | O que faz |
+| --- | --- |
+| **Token da API de Conversões** | Opcional. Deixe vazio para usar o token da conta Meta conectada |
+| **Código de teste** | Para validar os eventos na aba **Testar eventos** do Gerenciador de Eventos (pegue em Events Manager → Pixel → Test Events) |
+| **Catálogos** | Quais catálogos esse pixel mede |
+| **Disparar evento de compra** | Em que momento o evento de compra é enviado |
+
+<Warning>
+  Enquanto houver código de teste preenchido, os eventos reais aparecem só na aba **Testar eventos** da Meta. Apague o código e salve assim que terminar de validar.
+</Warning>
+
+## Problemas comuns
+
+<AccordionGroup>
+  <Accordion title="A lista de pixels não aparece">
+    A Meta não liberou o acesso aos anúncios nessa conexão. Reconecte a Meta marcando todas as permissões pedidas, ou informe o ID do pixel manualmente.
+  </Accordion>
+  <Accordion title="Quero remover a integração e meus dados">
+    Use **Excluir dados da integração**. Isso remove as credenciais e as configurações da Meta da sua conta no Linqui.
+  </Accordion>
+</AccordionGroup>

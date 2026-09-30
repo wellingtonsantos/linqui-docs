@@ -1,42 +1,47 @@
 ---
 title: "Visão Geral"
 sidebarTitle: "Visão Geral"
-description: "Conecte o Linqui a ERPs, frete, pagamento e marketing."
+description: "Conecte o Linqui a ERPs, frete, pagamento, marketing e assistentes de IA."
 ---
 
-Conecte o Linqui às ferramentas que você já usa. Cada integração mostra o status **Conectado** ou um botão **Conectar**, e tem sua própria página com detalhes, no menu ao lado.
+Conecte o Linqui às ferramentas que você já usa. Em **Integrações**, no menu lateral do painel, cada integração mostra o selo **Conectado** ou o botão **Conectar**. Cada uma tem a própria página aqui na documentação.
 
 ## Sistemas de estoque e ERP
 
-| Integração | Sincroniza |
+| Integração | O que sincroniza |
 |---|---|
-| [Bling](/integracoes/bling) | Produtos, estoque e pedidos automaticamente |
-| [Olist](/integracoes/olist) | Ecossistema de gestão do empreendedor brasileiro |
-| [Omnia ERP](/integracoes/omnia-erp) | Produtos, estoque, preços e pedidos |
-| [Sisplan](/integracoes/sisplan) | Categorias, atributos, produtos e estoque |
-| [vhsys](/integracoes/vhsys) | Produtos, estoque, clientes e pedidos |
+| [Bling](/integracoes/bling) | Produtos com variações, estoque e status dos pedidos vêm do Bling; pedidos e clientes vão para o Bling |
+| [Olist](/integracoes/olist) | Produtos, estoque, preços, categorias e listas de preço vêm do Olist; pedidos, clientes e tabelas de preço vão para o Olist |
+| [Omnia ERP](/integracoes/omnia-erp) | Categorias, produtos, variações e estoque vêm do Omnia; pedidos vão para o Omnia |
+| [Sisplan](/integracoes/sisplan) | Categorias, cores e tamanhos, produtos e estoque (a cada 5 minutos) vêm do Sisplan; pedidos vão para o Sisplan |
+| [vhsys](/integracoes/vhsys) | Categorias, produtos, variações e estoque vêm da vhsys; pedidos vão para a vhsys |
+
+<Info>
+  Quando mais de um ERP está conectado, o **gatilho de envio de pedidos** (pedido criado, confirmado, pago ou qualquer mudança) vale para todos. Na tela do pedido, **Sincronizar com o ERP** envia o pedido na hora.
+</Info>
 
 ## Gateways de frete
 
 | Integração | O que faz |
 |---|---|
-| [Frenet](/integracoes/frenet) | Cotação de frete em tempo real com várias transportadoras |
-| [Melhor Envio](/integracoes/melhor-envio) | Consulta de frete integrada, com valores e prazos no checkout |
+| [Frenet](/integracoes/frenet) | Cotação com várias transportadoras no carrinho e envio do pedido para gerar a etiqueta |
+| [Melhor Envio](/integracoes/melhor-envio) | Cotação no carrinho e envio do pedido para o carrinho do Melhor Envio, com seguro e serviços dos Correios |
 
 ## Pagamento
 
 | Integração | O que faz |
 |---|---|
-| [Mercado Pago](/integracoes/mercado-pago) | Recebe pagamentos online (Pix e cartão) direto no catálogo |
+| [Mercado Pago](/integracoes/mercado-pago) | Pagamento por Pix e cartão no catálogo, com desconto e parcelamento |
 
 ## Marketing
 
 | Integração | O que faz |
 |---|---|
-| [Meta (Facebook \& Instagram)](/integracoes/meta) | Instala Pixel + API de Conversões automaticamente |
+| [Meta (Facebook \& Instagram)](/integracoes/meta) | Pixel e API de Conversões por catálogo, com feed de produtos automático |
 
 ## Utilidades
 
 | Integração | O que faz |
 |---|---|
-| [Google Contatos](/integracoes/google-contatos) | Sincroniza novos contatos do Linqui para sua agenda do Google |
+| [Assistentes de IA](/integracoes/assistentes-ia) | Gerencie a conta pelo Claude, ChatGPT ou Gemini, com diagnóstico e plano de vendas |
+| [Google Contatos](/integracoes/google-contatos) | Envia os novos contatos do Linqui para a sua agenda do Google |
