@@ -1,0 +1,84 @@
+---
+title: "Mercúrio Pagamentos"
+description: "Receba por Pix e cartão de crédito no catálogo, com o dinheiro na conta digital do Mercúrio. Funciona com o modelo Pagamento Online."
+---
+
+**Categoria:** Pagamento
+
+Com o **Mercúrio Pagamentos**, o cliente paga por **Pix ou cartão de crédito** direto no catálogo, e o dinheiro cai na conta digital do Mercúrio. É uma das integrações que você pode usar no modelo de venda **Pagamento Online**.
+
+## Como conectar
+
+<Steps>
+  <Step title="Acesse Integrações → Mercúrio Pagamentos">
+    Clique em **Conectar** (ou **Gerenciar**, se já estiver conectado).
+  </Step>
+  <Step title="Conecte a conta do Mercúrio">
+    Se o [Mercúrio ERP](/integracoes/mercurio-erp) já está conectado, clique em **Usar esta conta** para aproveitar a mesma conexão. Para usar outra conta, entre com **E-mail e senha** ou **Token da API**, do mesmo jeito que no Mercúrio ERP.
+  </Step>
+  <Step title="Escolha os meios de pagamento">
+    Ligue **Pix** e/ou **Cartão de crédito** e escolha, para cada um, a forma de pagamento correspondente cadastrada no Mercúrio. Para o cartão, costuma ser **Cartão de Crédito - Cobrança Online**. Em **Parcelas no máximo**, defina até quantas vezes o cliente pode parcelar no cartão: de **À vista** a **12x**.
+  </Step>
+  <Step title="Ative a integração">
+    Ligue **Ativar integração**. Desativada, os catálogos deixam de oferecer Pix e cartão pelo Mercúrio.
+  </Step>
+  <Step title="Configure os catálogos">
+    Em **Catálogos**, abra o catálogo, escolha o modelo de venda **Pagamento Online** e selecione **Mercúrio Pagamentos** em **Integração de pagamento**. Veja [Modelo de venda](/primeiros-passos/modelo-de-venda).
+  </Step>
+</Steps>
+
+![Tela do Mercúrio Pagamentos no Linqui: conta, meios de pagamento com as formas do Mercúrio e parcelas, confirmação do pagamento e ativação](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/mercurio-pagamentos-config.png)
+
+<Warning>
+  Um meio de pagamento sem a forma de pagamento escolhida não aparece no checkout.
+</Warning>
+
+## No checkout
+
+<Tabs>
+  <Tab title="Pix">
+    O cliente escolhe **Pix** e clica em **Gerar Pix**. Ele recebe o QR Code e o código copia e cola, e a tela se atualiza sozinha quando o pagamento é confirmado.
+
+    ![Pagamento pelo Mercúrio no checkout com Pix selecionado e o botão Gerar Pix](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/mercurio-checkout-pix.png)
+  </Tab>
+  <Tab title="Cartão de crédito">
+    O cliente escolhe **Cartão**, digita os dados do cartão e o CPF ou CNPJ do titular e escolhe as parcelas, até o máximo que você definiu. Os dados do cartão vão direto para o Mercúrio, sem passar pelo Linqui.
+
+    ![Pagamento pelo Mercúrio no checkout com o formulário do cartão e a escolha de parcelas](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/mercurio-checkout-cartao.png)
+  </Tab>
+</Tabs>
+
+## Confirmação do pagamento
+
+Quando você conecta com **E-mail e senha**, o Linqui registra o aviso automático (webhook) do Mercúrio. Com ele ativo, a tela mostra **Confirmação automática ativa**: o Mercúrio avisa assim que o Pix cai ou o cartão é aprovado, e o pedido passa para **Pago**.
+
+Sem o webhook, a tela mostra **Confirmação por consulta**: o Linqui confere o pagamento enquanto o cliente está na tela de pagamento e, depois, a cada 5 minutos. Isso acontece quando:
+
+- a conexão foi feita pelo **Token da API** ou com **Usar esta conta**;
+- a sua empresa já usa o webhook do Mercúrio com outro sistema. Nesse caso, o Linqui não o substitui.
+
+## Venda no Mercúrio
+
+Para gerar a cobrança, o pedido é registrado como venda no Mercúrio, mesmo que o envio de pedidos do [Mercúrio ERP](/integracoes/mercurio-erp) esteja desligado.
+
+## Depois do pagamento
+
+O pedido pago aparece em **Pedidos** com o status **Pago**. Se você usa um ERP, escolha o gatilho **Pedido pago** para enviar ao ERP só as vendas pagas.
+
+## Problemas comuns
+
+<AccordionGroup>
+  <Accordion title="Pix ou cartão não aparece no checkout">
+    Confira se:
+
+    - **Ativar integração** está ligado;
+    - o meio de pagamento está ligado e tem a forma de pagamento do Mercúrio escolhida;
+    - o catálogo está no modelo **Pagamento Online**, com **Mercúrio Pagamentos** selecionado em **Integração de pagamento**.
+  </Accordion>
+  <Accordion title="O cliente pagou, mas o pedido não passou para Pago">
+    Com a **Confirmação por consulta**, a confirmação pode levar até 5 minutos depois que o cliente sai da tela de pagamento. Se passar disso, confira no Mercúrio se a cobrança foi paga.
+  </Accordion>
+  <Accordion title="O cliente vê &quot;Este pedido não pode ser pago online&quot;">
+    O pedido já foi enviado para outro ERP conectado na conta, e por isso não pode virar uma venda no Mercúrio para gerar a cobrança. Combine o pagamento com o cliente por outro meio.
+  </Accordion>
+</AccordionGroup>
