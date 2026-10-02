@@ -27,6 +27,14 @@ Com o **Mercúrio Pagamentos**, o cliente paga por **Pix ou cartão de crédito*
   </Step>
 </Steps>
 
+## Gateway padrão
+
+Em **Configurações → Pagamento**, o **Gateway padrão** é o usado pelos catálogos com **Integração geral** em **Integração de pagamento**. Escolha **Mercúrio Pagamentos** ali para não precisar selecionar o gateway em cada catálogo. Um catálogo com uma integração específica ignora o padrão.
+
+<Note>
+  Com o Mercado Pago e o Mercúrio Pagamentos conectados na mesma conta, vale o gateway escolhido no catálogo ou, em **Integração geral**, o gateway padrão. Sem nenhuma escolha, o checkout usa o Mercado Pago.
+</Note>
+
 ![Tela do Mercúrio Pagamentos no Linqui: conta, meios de pagamento com as formas do Mercúrio e parcelas, confirmação do pagamento e ativação](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/mercurio-pagamentos-config.png)
 
 <Warning>
@@ -73,7 +81,8 @@ O pedido pago aparece em **Pedidos** com o status **Pago**. Se você usa um ERP,
 
     - **Ativar integração** está ligado;
     - o meio de pagamento está ligado e tem a forma de pagamento do Mercúrio escolhida;
-    - o catálogo está no modelo **Pagamento Online**, com **Mercúrio Pagamentos** selecionado em **Integração de pagamento**.
+    - o catálogo está no modelo **Pagamento Online**, com **Mercúrio Pagamentos** em **Integração de pagamento** ou, em **Integração geral**, como **Gateway padrão** da conta;
+    - nenhum outro gateway foi escolhido para o catálogo ou como padrão.
   </Accordion>
   <Accordion title="O cliente pagou, mas o pedido não passou para Pago">
     Com a **Confirmação por consulta**, a confirmação pode levar até 5 minutos depois que o cliente sai da tela de pagamento. Se passar disso, confira no Mercúrio se a cobrança foi paga.
