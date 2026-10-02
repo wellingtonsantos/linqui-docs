@@ -55,6 +55,7 @@
         "pages": [
           "integracoes/visao-geral",
           "integracoes/bling",
+          "integracoes/mercurio-erp",
           "integracoes/olist",
           "integracoes/omnia-erp",
           "integracoes/sisplan",
@@ -62,6 +63,7 @@
           "integracoes/frenet",
           "integracoes/melhor-envio",
           "integracoes/mercado-pago",
+          "integracoes/mercurio-pagamentos",
           "integracoes/meta",
           "integracoes/google-contatos",
           "integracoes/assistentes-ia"
