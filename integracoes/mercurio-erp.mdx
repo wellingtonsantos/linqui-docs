@@ -13,6 +13,8 @@ Integre o ERP Mercúrio ao Linqui para trazer produtos, variações, estoque e c
 
 ## Como conectar
 
+![Tela de conexão do Mercúrio ERP no Linqui: entrada por e-mail e senha ou token da API, escolha do ambiente, ativação e envio de pedidos](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/mercurio-erp-conectar.png)
+
 <Steps>
   <Step title="Acesse Integrações → Mercúrio ERP">
     Clique em **Conectar** (ou **Gerenciar**, se já estiver conectado).
@@ -33,6 +35,10 @@ Integre o ERP Mercúrio ao Linqui para trazer produtos, variações, estoque e c
     Ligue **Ativar integração**. Desativada, o Linqui não busca nem envia dados para o Mercúrio.
   </Step>
 </Steps>
+
+Com a conta conectada, a tela mostra a empresa, a última atualização, a sincronização completa, as opções do que sincronizar e o envio de pedidos:
+
+![Tela do Mercúrio ERP conectado: conta, atualização automática, sincronização completa, o que sincronizar, ativação e envio de pedidos](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/mercurio-erp-config.png)
 
 ## Atualização automática
 
@@ -88,6 +94,26 @@ Na tela do pedido, **Sincronizar com o ERP** envia o pedido na hora. Se o pedido
   Sem a exigência de CPF/CNPJ ativada (em **Configurações → Cadastro de clientes**), os pedidos enviados não ficam vinculados ao cadastro do cliente no Mercúrio.
 </Warning>
 
-## Se o acesso expirar
+## Problemas comuns
 
-Se o Mercúrio recusar o acesso, a tela da integração mostra o aviso **Acesso ao Mercúrio expirou**. Clique em **Reconectar** e entre de novo.
+<AccordionGroup>
+  <Accordion title="Conectei, mas nenhum produto apareceu">
+    A atualização automática traz só o que mudou no Mercúrio. Na primeira vez, clique em **Sincronizar tudo** e espere terminar.
+  </Accordion>
+  <Accordion title="Um produto do Mercúrio não aparece no catálogo">
+    Confira se:
+
+    - o produto está ativo no Mercúrio;
+    - a opção **Só produtos marcados para o catálogo** está ligada e o produto não tem **Exibir no catálogo** marcado no Mercúrio;
+    - o seu plano não chegou ao limite de produtos (o aviso da sincronização mostra quantos ficaram de fora).
+  </Accordion>
+  <Accordion title="O pedido não chegou ao Mercúrio">
+    Confira se **Ativar integração** e **Ativar envio** estão ligados e se o pedido já atingiu o **Gatilho**. Para enviar na hora e ver a mensagem de erro, se houver, use **Sincronizar com o ERP** na tela do pedido.
+  </Accordion>
+  <Accordion title="Tenho outro ERP conectado na mesma conta">
+    O pedido vai para todos os ERPs com **Ativar envio** ligado. Um produto que só existe no Mercúrio é recusado pelo outro ERP (a vhsys, por exemplo, avisa que há itens sem produto correspondente por SKU). Deixe o envio ligado só no ERP que deve receber os pedidos.
+  </Accordion>
+  <Accordion title="Apareceu o aviso &quot;Acesso ao Mercúrio expirou&quot;">
+    O Mercúrio recusou o acesso do Linqui. Clique em **Reconectar** e entre de novo.
+  </Accordion>
+</AccordionGroup>
