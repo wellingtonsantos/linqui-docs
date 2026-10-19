@@ -30,6 +30,13 @@
       "contatos",
       "pedidos",
       {
+        "group": "Linqui CRM",
+        "icon": "comments",
+        "pages": [
+          "crm/conectar-api-oficial"
+        ]
+      },
+      {
         "group": "Aplicativos",
         "icon": "bolt",
         "pages": [
