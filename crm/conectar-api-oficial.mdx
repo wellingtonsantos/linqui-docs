@@ -1,0 +1,229 @@
+---
+title: "Conectar o WhatsApp pela API oficial"
+description: "Passo a passo para ligar o número da sua empresa ao Linqui CRM pela API oficial da Meta, sem deixar de usar o app WhatsApp Business no celular."
+---
+
+O Linqui CRM recebe e envia as mensagens do WhatsApp da sua empresa. A forma recomendada de conectar o número é a **API oficial da Meta**: o número não corre risco de bloqueio e, se você usa o app **WhatsApp Business**, ele continua funcionando no celular ao mesmo tempo que no CRM.
+
+Esta página mostra a conexão do começo ao fim, com as telas do Linqui, da Meta e do celular.
+
+<Info>
+  Só o **dono** ou um **administrador** da conta no Linqui conecta o número. Quem atende vê o aviso **O WhatsApp ainda não foi conectado** e o botão **Avisar quem administra**, que manda uma notificação para os administradores.
+</Info>
+
+## Antes de começar
+
+Tenha em mãos:
+
+- **O Linqui CRM ativo** na sua conta, na assinatura ou no teste grátis.
+- **O login do Facebook** de quem administra a empresa na Meta (o portfólio empresarial do Meta Business Suite). Se a empresa ainda não tem portfólio, o próprio passo a passo cria um.
+- **O celular com o app WhatsApp Business** do número, na versão 2.24.17 ou mais nova, para ler um QR Code.
+- **Um computador**, com o navegador liberando janelas pop-up: o login da Meta abre numa janela à parte.
+
+<Tip>
+  O número está no WhatsApp comum, e não no WhatsApp Business? Instale o app **WhatsApp Business** no celular e entre com o mesmo número: o app traz as conversas do WhatsApp comum. Depois, siga esta página.
+</Tip>
+
+## Qual opção escolher
+
+Na tela de conexão, o cartão **API oficial da Meta** tem dois botões. Use esta tabela para escolher:
+
+| Sua situação | O que fazer |
+| --- | --- |
+| Você atende pelo app **WhatsApp Business** e quer continuar usando o app no celular | Clique em **WhatsApp Business** e escolha o seu número na lista |
+| Você quer usar um número que não está em nenhum app WhatsApp | Clique em **WhatsApp Business** e escolha **Insira um novo número de telefone**. Esse número fica só na API: ele não funciona num app WhatsApp no celular |
+| A empresa já tem uma conta na API oficial (WABA), feita com outro sistema | Clique em **Conectar WABA existente** |
+| Você só quer testar o CRM por alguns dias | Use o cartão **Não oficial (QR Code)**, sabendo do risco de bloqueio do número |
+
+## Passo a passo
+
+<Steps>
+  <Step title="Abra o CRM">
+    No menu do painel, clique em **CRM**. Na primeira vez, o Linqui prepara o número da sua conta em alguns segundos.
+
+    <Frame>
+      <img src="https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-00-menu.png" alt="Menu do painel do Linqui com o item CRM" width="320" />
+    </Frame>
+  </Step>
+  <Step title="Escolha a API oficial">
+    Na tela **Como você quer conectar o WhatsApp?**, no cartão **API oficial da Meta**, clique em **WhatsApp Business**.
+
+    ![Tela do Linqui CRM com a escolha entre a API oficial da Meta, com os botões WhatsApp Business e Conectar WABA existente, e a conexão não oficial por QR Code](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-01-escolha.png)
+  </Step>
+  <Step title="Entre com o Facebook">
+    Abre uma janela da Meta. Entre com o Facebook de quem administra a empresa e clique em **Continuar**.
+
+    A janela fala em **Cache sistemas** e **Wame API**. É o parceiro oficial da Meta que o Linqui usa para o WhatsApp, e o nome aparece em algumas telas da Meta e do app.
+
+    <Frame>
+      <img src="https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-02-meta-inicio.png" alt="Janela da Meta: Conecte sua conta facilmente a Cache sistemas, com os botões Cancelar e Continuar" width="460" />
+    </Frame>
+  </Step>
+  <Step title="Escolha o número">
+    Em **Telefone**, abra a lista e escolha:
+
+    - **O número do app WhatsApp Business**: ele aparece na lista com o nome da empresa. Escolha esse para continuar usando o app no celular.
+    - **Insira um novo número de telefone**: para um número que não está em nenhum app WhatsApp. A Meta envia um código por SMS ou ligação para confirmar.
+
+    Clique em **Avançar**.
+
+    <Frame>
+      <img src="https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-04-meta-escolha-numero.png" alt="Lista de números da Meta com as opções Insira um novo número de telefone, Usar um nome de exibição com um número virtual e os números já registrados" width="460" />
+    </Frame>
+
+    <Warning>
+      Um número com o selo **Registrado** já está na API oficial. Se ele é usado em outro sistema (outro CRM ou atendimento automático), conectar aqui tira o número de lá. Na dúvida, fale com quem cuida desse outro sistema antes.
+    </Warning>
+  </Step>
+  <Step title="Confira os dados da empresa">
+    A Meta mostra o nome, o número, a categoria e o site do perfil do WhatsApp. Se algo estiver errado, clique em **Voltar** e escolha outro número. Para seguir, clique em **Avançar**.
+
+    <Frame>
+      <img src="https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-05-meta-detalhes.png" alt="Tela Verifique os detalhes da sua conta, com o perfil do WhatsApp da empresa" width="460" />
+    </Frame>
+  </Step>
+  <Step title="Escolha o portfólio empresarial">
+    Escolha o portfólio empresarial da sua empresa na Meta, ou crie um, e clique em **Avançar**.
+
+    <Frame>
+      <img src="https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-06-meta-portfolio.png" alt="Tela Selecione os ativos de negócios para compartilhar com o Wame API, com o portfólio empresarial escolhido" width="460" />
+    </Frame>
+  </Step>
+  <Step title="Leia o QR Code com o app WhatsApp Business">
+    A Meta mostra um QR Code. Deixe essa janela aberta e pegue o celular. No app **WhatsApp Business**:
+
+    1. Abra a conversa **Facebook Business** e toque em **Connect** (Conectar). Não recebeu essa mensagem? Toque em **Configurações** → **Conta** → **Plataforma comercial**.
+    2. Toque em **Conectar à Plataforma comercial** e leia o QR Code da tela do computador.
+
+    <Frame>
+      <img src="https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-08-meta-qr-instrucoes.png" alt="Janela da Meta com o QR Code para ler pelo app WhatsApp Business e as instruções" width="460" />
+    </Frame>
+
+    ![No celular: a mensagem Connect to the Business Platform na conversa Facebook Business e a tela Conectar à Plataforma comercial do app WhatsApp Business](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-celular-01-conectar.png)
+
+    Não consegue ler o QR Code? Na janela da Meta, clique em **Em vez disso, use um código de acesso** e digite o código no app.
+  </Step>
+  <Step title="Escolha se compartilha o histórico">
+    No celular, o app pergunta se você quer compartilhar o histórico de conversas:
+
+    - **Compartilhar**: até 6 meses de conversas individuais aparecem no CRM. Conversas de grupo não entram, e fotos, vídeos e áudios só vêm dos últimos 14 dias.
+    - **Não compartilhar conversas**: o CRM começa vazio, só com as conversas novas.
+
+    Toque em **Confirmar** e espere até 45 segundos, até aparecer **Sua conta está conectada**. Toque em **OK**.
+
+    ![No celular: a pergunta Deseja compartilhar o histórico de conversas, a confirmação Sua conta está conectada e a tela Plataforma comercial com o lembrete de abrir o app a cada 14 dias](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-celular-02-historico-e-conexao.png)
+  </Step>
+  <Step title="Conclua no computador">
+    Na janela da Meta, aparece **Sua conta está conectada a Cache sistemas**. Clique em **Concluir**.
+
+    <Frame>
+      <img src="https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-09-meta-concluido.png" alt="Janela da Meta: Sua conta está conectada a Cache sistemas, com os botões Adicionar forma de pagamento e Concluir" width="460" />
+    </Frame>
+
+    O botão **Adicionar forma de pagamento** cadastra um cartão na Meta, que cobra direto de você as mensagens pela API oficial. Dá para fazer agora ou depois, no Meta Business Suite. Veja [Custos da Meta](#custos-da-meta).
+  </Step>
+  <Step title="Pronto: o CRM abre sozinho">
+    A tela do Linqui percebe a conexão e abre o CRM em **Conversas**.
+
+    ![Linqui CRM aberto na aba Conversas logo depois da conexão](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-10-crm-aberto.png)
+
+    Se você compartilhou o histórico, as conversas aparecem em cerca de 1 minuto, com as mensagens que você já tinha trocado com cada cliente.
+
+    ![Linqui CRM com as conversas do WhatsApp sincronizadas depois da conexão](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-11-conversas-sincronizadas.png)
+  </Step>
+</Steps>
+
+## Conferir a conexão
+
+Em **Configurações** → **CRM** → **Números de WhatsApp**, o número aparece como **Conectado**, com o selo **API oficial**. Em **Gerenciar**, você atualiza o estado da conexão (**Atualizar estado**) e renomeia o número (**Renomear**).
+
+![Tela Números de WhatsApp com o número conectado pela API oficial](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-12-numeros.png)
+
+## O app WhatsApp Business continua funcionando
+
+Com a API oficial e o app ligados ao mesmo número, a Meta chama a conexão de **coexistência**. Na prática:
+
+- **Você continua atendendo pelo celular.** As conversas individuais aparecem no app e no CRM, e as mensagens que você manda por um aparecem no outro.
+- **Abra o app pelo menos uma vez a cada 14 dias.** Sem isso, a Meta desliga o celular da conexão.
+- **Os aparelhos conectados saem na hora da conexão**, como o WhatsApp Web e o computador. Conecte de novo os que quiser. O WhatsApp para Windows não funciona junto com a API oficial.
+- **Alguns recursos do app mudam** nas conversas individuais: as mensagens temporárias são desligadas, as fotos de visualização única e a localização em tempo real deixam de funcionar, e as listas de transmissão ficam só para leitura.
+- **Grupos não vão para o CRM.** Eles continuam só no app.
+- **Ligações, catálogo, status e etiquetas** continuam no app, do jeito de sempre.
+
+## Custos da Meta
+
+Na API oficial, a Meta cobra as mensagens direto da sua empresa, na forma de pagamento cadastrada no Meta Business Suite. Esse valor não passa pelo Linqui e não faz parte da assinatura do Linqui CRM.
+
+- **Modelos** (mensagens de marketing, de utilidade e de autenticação): a Meta cobra por mensagem entregue.
+- **Respostas de atendimento**, até 24 horas depois da última mensagem do cliente: desde 1º de outubro de 2026, as primeiras 1.000 do mês, por número, são grátis. A partir da 1.001ª, a Meta cobra.
+- **Conversas que começam num anúncio** que leva ao WhatsApp têm um período grátis.
+- **O que você manda pelo app WhatsApp Business** no celular continua grátis.
+- **O que o cliente manda para você** não é cobrado.
+
+<Warning>
+  Sem uma forma de pagamento cadastrada na Meta, as respostas de atendimento param de sair depois das 1.000 grátis do mês. Cadastre um cartão no **Meta Business Suite**, nas configurações de pagamento da sua conta do WhatsApp.
+</Warning>
+
+Os preços por país e as regras completas estão na [página de preços da Meta](https://developers.facebook.com/docs/whatsapp/pricing/).
+
+## A janela de 24 horas e os modelos
+
+Na API oficial, você responde livremente até **24 horas** depois da última mensagem do cliente. Depois disso, o campo de mensagem avisa que o prazo passou e mostra **Enviar modelo**: a conversa só volta com um **modelo aprovado pela Meta**. Quando o cliente responder, a janela de 24 horas abre de novo.
+
+Os modelos são criados e aprovados no **Gerenciador do WhatsApp**, no Meta Business Suite. Os aprovados aparecem no CRM em **Enviar modelo** e no item **Modelos** do botão de anexos.
+
+## O que muda em relação ao QR Code
+
+| Recurso | API oficial | Não oficial (QR Code) |
+| --- | --- | --- |
+| Texto, fotos, vídeos, áudios e documentos | ✓ | ✓ |
+| Localização e contato | ✓ | ✓ |
+| Pedidos, catálogos e mensagens rápidas | ✓ | ✓ |
+| Responder a qualquer momento | Até 24 h depois da última mensagem do cliente; depois, só modelo | ✓ |
+| Modelos aprovados pela Meta | ✓ | — |
+| Enquetes e eventos | — | ✓ |
+| Grupos do WhatsApp | — | ✓ |
+| Foto de perfil dos contatos | — | ✓ |
+| Sem risco de bloqueio do número | ✓ | — |
+
+## Problemas comuns
+
+<AccordionGroup>
+  <Accordion title="A janela da Meta não abre">
+    O navegador bloqueou a janela pop-up. Libere os pop-ups do site **linqui.app** (no Chrome, clique no ícone de bloqueio na barra de endereço) e clique em **WhatsApp Business** de novo. Faça a conexão num computador: no celular, os navegadores costumam bloquear essa janela.
+  </Accordion>
+  <Accordion title="O app diz que a conta já está conectada a outra plataforma">
+    O WhatsApp Business se conecta a uma plataforma por vez. Se o número já estava ligado a outro sistema, desconecte antes: no app, toque em **Configurações** → **Conta** → **Plataforma comercial**, escolha a plataforma antiga, toque em **Desconectar** e confirme. As conversas continuam no app. Depois, leia o QR Code de novo.
+
+    ![No celular: a tela Plataforma comercial com a opção Desconectar e as duas confirmações da desconexão](https://raw.githubusercontent.com/wellingtonsantos/linqui-docs-media/main/crm-api-oficial-celular-03-desconectar-outra.png)
+
+    <Warning>
+      Desconectar tira o número do outro sistema. Se ele ainda é usado lá, avise quem cuida desse sistema antes.
+    </Warning>
+  </Accordion>
+  <Accordion title="Não chegou a mensagem do Facebook Business no app">
+    No app WhatsApp Business, toque em **Configurações** → **Conta** → **Plataforma comercial** → **Conectar à Plataforma comercial** e leia o QR Code. Confira também se o app está na versão 2.24.17 ou mais nova.
+  </Accordion>
+  <Accordion title="Aparece “Não deu para abrir a conexão oficial agora”">
+    Clique em **Tentar de novo**, no próprio cartão. Se continuar, use **Precisa de ajuda? Fale com o time do Linqui**, logo abaixo.
+  </Accordion>
+  <Accordion title="Concluí na Meta, mas o CRM não abriu">
+    Recarregue a página do CRM. Depois, confira o número em **Configurações** → **CRM** → **Números de WhatsApp** e clique em **Gerenciar** → **Atualizar estado**. Se ele continuar **Desconectado**, faça o passo a passo de novo ou fale com o suporte.
+  </Accordion>
+  <Accordion title="O CRM mostra “Falta ativar o seu número”">
+    A sua conta ainda não tem um número liberado. Clique em **Ativar com o suporte** e o time do Linqui libera para você. A tela pega o número sozinha assim que ele é liberado.
+  </Accordion>
+  <Accordion title="O número desconectou do celular depois de alguns dias">
+    A Meta desliga o celular quando o app WhatsApp Business fica 14 dias sem ser aberto. Abra o app e, se precisar, conecte de novo em **Configurações** → **Conta** → **Plataforma comercial**.
+  </Accordion>
+  <Accordion title="Sou atendente e não vejo a tela de conexão">
+    Só o dono ou um administrador da conta no Linqui conecta o número. Clique em **Avisar quem administra**: eles recebem uma notificação no painel e no celular.
+  </Accordion>
+  <Accordion title="Quero desconectar o número do Linqui">
+    No app WhatsApp Business, toque em **Configurações** → **Conta** → **Plataforma comercial**, toque em **Cache sistemas** e em **Desconectar**. O app continua funcionando normalmente. Para tirar o número do Linqui CRM também, fale com o suporte.
+  </Accordion>
+</AccordionGroup>
+
+## Precisa de ajuda?
+
+Na tela de conexão, clique em **Precisa de ajuda? Fale com o time do Linqui** para falar com o suporte pelo WhatsApp. A mensagem já vai com o nome da sua conta.
